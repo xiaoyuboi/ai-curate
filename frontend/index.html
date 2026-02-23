@@ -500,6 +500,33 @@
                 </div>
             </div>
         </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>📊 资讯列表</h2>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <select id="topic-filter" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="">全部主题</option>
+                    </select>
+                    <select id="source-filter" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="">全部来源</option>
+                        <option value="twitter">Twitter</option>
+                        <option value="website">网站</option>
+                    </select>
+                    <select id="pushed-filter" style="padding: 5px 10px; border: 1px solid #ddd; border-radius: 4px;">
+                        <option value="">全部状态</option>
+                        <option value="false">待推送</option>
+                        <option value="true">已推送</option>
+                    </select>
+                    <button class="btn btn-sm btn-secondary" onclick="loadContent()">刷新</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="content-list" id="content-list" style="max-height: 500px; overflow-y: auto;">
+                    <div class="loading">加载中...</div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="toast" id="toast"></div>
@@ -838,7 +865,9 @@
                 loadTwitterAccounts(),
                 loadWebsites(),
                 loadConfig(),
-                loadHistory()
+                loadHistory(),
+                loadTopics(),
+                loadContent()
             ]);
 
             // 搜索功能
@@ -850,6 +879,74 @@
                 );
                 renderAccounts(filtered);
             });
+
+            // 资讯筛选
+            document.getElementById('topic-filter').addEventListener('change', loadContent);
+            document.getElementById('source-filter').addEventListener('change', loadContent);
+            document.getElementById('pushed-filter').addEventListener('change', loadContent);
+        }
+
+        // 加载主题列表
+        async function loadTopics() {
+            try {
+                const res = await fetch(`${API_BASE}/topics`);
+                const topics = await res.json();
+                const select = document.getElementById('topic-filter');
+                select.innerHTML = '<option value="">全部主题</option>';
+                topics.forEach(t => {
+                    const opt = document.createElement('option');
+                    opt.value = t.name;
+                    opt.textContent = `${t.name} (${t.count})`;
+                    select.appendChild(opt);
+                });
+            } catch (e) {
+                console.error('Load topics error:', e);
+            }
+        }
+
+        // 加载资讯列表
+        async function loadContent() {
+            try {
+                const topic = document.getElementById('topic-filter').value;
+                const source = document.getElementById('source-filter').value;
+                const is_pushed = document.getElementById('pushed-filter').value;
+
+                let url = `${API_BASE}/content?limit=50`;
+                if (topic) url += `&topic=${encodeURIComponent(topic)}`;
+                if (source) url += `&source=${source}`;
+                if (is_pushed) url += `&is_pushed=${is_pushed}`;
+
+                const res = await fetch(url);
+                const items = await res.json();
+                const list = document.getElementById('content-list');
+
+                if (items.length === 0) {
+                    list.innerHTML = '<div style="text-align: center; padding: 20px; color: #888;">暂无内容</div>';
+                    return;
+                }
+
+                list.innerHTML = items.map(item => `
+                    <div style="padding: 12px; border-bottom: 1px solid #f0f0f0; ${item.is_pushed ? 'opacity: 0.6;' : ''}">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 5px;">
+                            <div style="flex: 1;">
+                                <span class="badge ${item.source_type === 'twitter' ? 'badge-enabled' : 'badge-disabled'}" style="margin-right: 8px;">
+                                    ${item.source_type === 'twitter' ? 'Twitter' : '网站'}
+                                </span>
+                                ${item.topic ? `<span class="badge" style="background: #e3f2fd; color: #1976d2;">${item.topic}</span>` : ''}
+                                ${item.is_pushed ? `<span class="badge badge-disabled" style="margin-left: 8px;">已推送</span>` : `<span class="badge badge-enabled" style="margin-left: 8px;">待推送</span>`}
+                            </div>
+                            <div style="font-size: 12px; color: #888;">
+                                ${new Date(item.fetched_at).toLocaleString()}
+                            </div>
+                        </div>
+                        <div style="font-weight: 500; margin-bottom: 5px;">${item.title || '无标题'}</div>
+                        <div style="font-size: 13px; color: #666; margin-bottom: 8px;">${item.content ? item.content.substring(0, 150) + (item.content.length > 150 ? '...' : '') : ''}</div>
+                        ${item.url ? `<a href="${item.url}" target="_blank" style="color: #667eea; font-size: 12px;">查看原文 →</a>` : ''}
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error('Load content error:', e);
+            }
         }
 
         // 频率选择变化时显示/隐藏时间

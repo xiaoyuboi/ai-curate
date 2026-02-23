@@ -48,6 +48,7 @@ class Tweet(Base):
     account_id = Column(Integer, ForeignKey("twitter_accounts.id"))
     content = Column(Text, nullable=False)
     url = Column(String, nullable=True)
+    topic = Column(String, nullable=True)  # 主题标签，如 OpenAI、Claude
     posted_at = Column(DateTime, nullable=True)
     fetched_at = Column(DateTime, default=datetime.utcnow)
     is_pushed = Column(Boolean, default=False)
@@ -65,6 +66,7 @@ class Article(Base):
     title = Column(String, nullable=False)
     url = Column(String, unique=True, nullable=False)
     content = Column(Text, nullable=True)
+    topic = Column(String, nullable=True)  # 主题标签
     published_at = Column(DateTime, nullable=True)
     fetched_at = Column(DateTime, default=datetime.utcnow)
     is_pushed = Column(Boolean, default=False)

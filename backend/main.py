@@ -6,6 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 
 from backend.database import (
     init_db, get_db, TwitterAccount, Website, PushConfig, PushHistory,
@@ -378,6 +379,110 @@ async def get_push_history(
         )
         for h in history
     ]
+
+
+# ==================== 资讯列表 ====================
+
+class ContentItemResponse(BaseModel):
+    id: int
+    source_type: str
+    title: Optional[str] = None
+    content: str
+    url: Optional[str] = None
+    topic: Optional[str] = None
+    fetched_at: str
+    is_pushed: bool
+
+
+@app.get("/api/content", response_model=List[ContentItemResponse])
+async def get_content(
+    topic: Optional[str] = None,
+    source: Optional[str] = None,  # twitter, website
+    is_pushed: Optional[bool] = None,
+    limit: int = 50,
+    db: Session = Depends(get_db)
+):
+    """获取资讯列表"""
+    # 查询推文
+    tweets_query = db.query(Tweet)
+    if topic:
+        tweets_query = tweets_query.filter(Tweet.topic == topic)
+    if is_pushed is not None:
+        tweets_query = tweets_query.filter(Tweet.is_pushed == is_pushed)
+    tweets = tweets_query.order_by(Tweet.fetched_at.desc()).limit(limit).all()
+
+    # 查询文章
+    articles_query = db.query(Article)
+    if topic:
+        articles_query = articles_query.filter(Article.topic == topic)
+    if is_pushed is not None:
+        articles_query = articles_query.filter(Article.is_pushed == is_pushed)
+    articles = articles_query.order_by(Article.fetched_at.desc()).limit(limit).all()
+
+    # 合并结果
+    results = []
+
+    for t in tweets:
+        results.append(ContentItemResponse(
+            id=t.id,
+            source_type="twitter",
+            title=t.content[:50],
+            content=t.content,
+            url=t.url,
+            topic=t.topic,
+            fetched_at=t.fetched_at.isoformat(),
+            is_pushed=t.is_pushed
+        ))
+
+    for a in articles:
+        results.append(ContentItemResponse(
+            id=a.id,
+            source_type="website",
+            title=a.title,
+            content=a.content or a.title,
+            url=a.url,
+            topic=a.topic,
+            fetched_at=a.fetched_at.isoformat(),
+            is_pushed=a.is_pushed
+        ))
+
+    # 按时间排序
+    results.sort(key=lambda x: x.fetched_at, reverse=True)
+
+    # 过滤来源
+    if source:
+        results = [r for r in results if r.source_type == source]
+
+    return results[:limit]
+
+
+@app.get("/api/topics")
+async def get_topics(db: Session = Depends(get_db)):
+    """获取所有主题及其数量"""
+    # 从推文中获取主题
+    tweet_topics = db.query(
+        Tweet.topic,
+        func.count(Tweet.id).label("count")
+    ).filter(Tweet.topic != None).group_by(Tweet.topic).all()
+
+    # 从文章中获取主题
+    article_topics = db.query(
+        Article.topic,
+        func.count(Article.id).label("count")
+    ).filter(Article.topic != None).group_by(Article.topic).all()
+
+    # 合并统计
+    topic_counts = {}
+    for topic, count in tweet_topics:
+        topic_counts[topic] = topic_counts.get(topic, 0) + count
+    for topic, count in article_topics:
+        topic_counts[topic] = topic_counts.get(topic, 0) + count
+
+    # 转换为列表
+    topics = [{"name": k, "count": v} for k, v in topic_counts.items()]
+    topics.sort(key=lambda x: x["count"], reverse=True)
+
+    return topics
 
 
 # ==================== 统计 ====================

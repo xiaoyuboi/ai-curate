@@ -5,14 +5,17 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-def send_feishu_message(webhook_url: str, content: str, items: List[Dict[str, Any]] = None) -> bool:
+def send_feishu_message(webhook_url: str, content: str, items: List[Dict[str, Any]] = None,
+                       hot_topics: Dict[str, List[Dict]] = None, normal_items: List[Dict] = None) -> bool:
     """
-    发送飞书消息
+    发送飞书消息 - 支持两层推送：热点主题 + 普通资讯
 
     Args:
         webhook_url: 飞书机器人webhook地址
         content: 消息标题/摘要
-        items: 内容项列表，每项包含 title, url, summary
+        items: 内容项列表，每项包含 title, url, summary, topic
+        hot_topics: 热点主题字典 {topic: [items]}
+        normal_items: 普通资讯列表
 
     Returns:
         是否发送成功
@@ -21,109 +24,117 @@ def send_feishu_message(webhook_url: str, content: str, items: List[Dict[str, An
         logger.warning("Feishu webhook URL not configured")
         return False
 
-    # 构建卡片消息
-    cards = []
-
-    # 标题卡片
-    header_card = {
-        "header": {
-            "title": {
-                "tag": "plain_text",
-                "content": content,
-                "template": "blue"
-            }
-        }
-    }
-    cards.append(header_card)
-
-    # 内容卡片
-    if items:
-        for item in items:
-            item_card = {
-                "header": {
-                    "title": {
-                        "tag": "plain_text",
-                        "content": item.get("title", "无标题")[:50]
-                    }
-                },
-                "elements": [
-                    {
-                        "tag": "div",
-                        "text": {
-                            "tag": "lark_md",
-                            "content": item.get("summary", "")[:200]
-                        }
-                    }
-                ]
-            }
-            if item.get("url"):
-                item_card["elements"].append({
-                    "tag": "action",
-                    "actions": [
-                        {
-                            "tag": "button",
-                            "text": {
-                                "tag": "plain_text",
-                                "content": "查看原文"
-                            },
-                            "url": item["url"],
-                            "type": "primary"
-                        }
-                    ]
-                })
-            cards.append(item_card)
-
-    # 如果没有内容项，只发送标题
     if not items:
+        # 发送空消息
         message = {
             "msg_type": "interactive",
-            "card": header_card
+            "card": {
+                "config": {"wide_screen_mode": True},
+                "elements": [{
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": "**暂无新内容**"
+                    }
+                }]
+            }
         }
     else:
-        # 使用container类型发送多条消息
+        # 构建消息结构
         message = {
             "msg_type": "interactive",
             "card": {
                 "config": {
                     "wide_screen_mode": True
                 },
-                "elements": [
-                    {
-                        "tag": "div",
-                        "text": {
-                            "tag": "lark_md",
-                            "content": f"**{content}**\n共 {len(items)} 条内容",
-                            "template": "blue"
-                        }
-                    },
-                    {
-                        "tag": "div",
-                        "text": {
-                            "tag": "lark_md",
-                            "content": "---"
-                        }
-                    }
-                ]
+                "elements": []
             }
         }
 
-        # 添加每个内容项
-        for item in items:
-            title = item.get("title", "无标题")[:50]
-            summary = item.get("summary", "")[:200]
-            url = item.get("url", "")
+        # 标题
+        message["card"]["elements"].append({
+            "tag": "div",
+            "text": {
+                "tag": "lark_md",
+                "content": f"**{content}**\n共 {len(items)} 条内容"
+            }
+        })
+        message["card"]["elements"].append({"tag": "div", "text": {"tag": "lark_md", "content": "---"}})
 
-            item_content = f"**{title}**\n{summary}"
-            if url:
-                item_content += f"\n[查看原文]({url})"
-
+        # 热点主题（优先展示）
+        if hot_topics:
             message["card"]["elements"].append({
                 "tag": "div",
                 "text": {
                     "tag": "lark_md",
-                    "content": item_content
+                    "content": "**📌 热点聚焦**"
                 }
             })
+            for topic, topic_items in hot_topics.items():
+                topic_title = f"🔹 {topic} ({len(topic_items)}条)"
+                message["card"]["elements"].append({
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": topic_title
+                    }
+                })
+                for item in topic_items:
+                    title = item.get("title", "无标题")[:50]
+                    summary = item.get("summary", "")[:150]
+                    url = item.get("url", "")
+                    item_content = f"  • {title}\n    {summary}"
+                    if url:
+                        item_content += f" [原文]({url})"
+                    message["card"]["elements"].append({
+                        "tag": "div",
+                        "text": {
+                            "tag": "lark_md",
+                            "content": item_content
+                        }
+                    })
+
+        # 普通资讯
+        if normal_items:
+            if hot_topics:
+                message["card"]["elements"].append({
+                    "tag": "div",
+                    "text": {"tag": "lark_md", "content": "---"}
+                })
+                message["card"]["elements"].append({
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": "**📰 其他重要资讯**"
+                    }
+                })
+            else:
+                message["card"]["elements"].append({
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": "**📰 资讯速递**"
+                    }
+                })
+
+            for item in normal_items:
+                title = item.get("title", "无标题")[:50]
+                summary = item.get("summary", "")[:150]
+                url = item.get("url", "")
+                topic = item.get("topic", "")
+
+                topic_tag = f"[{topic}] " if topic else ""
+                item_content = f"**{topic_tag}{title}**\n{summary}"
+                if url:
+                    item_content += f"\n[查看原文]({url})"
+
+                message["card"]["elements"].append({
+                    "tag": "div",
+                    "text": {
+                        "tag": "lark_md",
+                        "content": item_content
+                    }
+                })
 
     try:
         response = requests.post(webhook_url, json=message, timeout=30)

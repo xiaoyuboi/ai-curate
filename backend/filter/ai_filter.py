@@ -90,16 +90,22 @@ def build_filter_prompt(content_items: List[Dict]) -> str:
     prompt = f"""请分析以下AI相关资讯，筛选出最值得推送的内容（最多10条）。
 
 筛选标准：
-1. 内容必须与AI相关（人工智能、机器学习、大模型等）
-2. 内容要有价值（新闻、重大更新、技术突破等）
+1. 内容必须与AI相关（人工智能、机器学习、大模型、AI产品等）
+2. 内容要有价值（新闻、重大更新、技术突破、产品发布等）
 3. 避免重复或相似内容
+4. 为每条内容提取主题标签（如：OpenAI、Claude、Google、Microsoft、AI编程等）
+
+主题标签规则：
+- 使用简洁的实体名称作为主题（如公司名、产品名、技术名）
+- 常见主题：OpenAI、Claude、Google、Microsoft、Meta、AI编程、LLM、GPT等
+- 如果无法归类，使用"其他"
 
 以下是待筛选的内容：
 {''.join(items_text)}
 
 请以JSON数组格式返回筛选结果，格式如下：
 [
-  {{"title": "标题", "content": "摘要", "url": "链接", "source": "来源", "reason": "筛选理由"}}
+  {{"title": "标题", "content": "摘要", "url": "链接", "source": "来源", "topic": "主题标签", "reason": "筛选理由"}}
 ]
 
 只返回JSON数组，不要其他内容。"""
@@ -127,15 +133,19 @@ def parse_minimax_response(response: str) -> List[Dict]:
 MAX_CONTENT_PER_PUSH = 50  # 每批最多处理的内容数
 TARGET_ITEM_COUNT = 10      # 目标筛选出多少条优质内容
 MAX_BATCHES = 3             # 最多筛选多少批
+TOPIC_THRESHOLD = 2         # 热点阈值：同一主题出现2次及以上为热点
 
 
 def filter_and_push(db: Session, webhook_url: str, push_type: str = "manual") -> bool:
-    """执行AI筛选并推送 - 循环筛选直到找到足够数量的优质内容"""
+    """执行AI筛选并推送 - 循环筛选直到找到足够数量的优质内容
+    实现两层推送：热点主题（多次出现）+ 普通资讯（单次）
+    """
 
     all_filtered_items = []  # 收集所有筛选出的优质内容
     processed_tweet_ids = []  # 记录已处理的推文ID
     processed_article_ids = []  # 记录已处理的文章ID
     batch_count = 0
+    topic_mapping = {}  # 记录原始ID到主题的映射
 
     while batch_count < MAX_BATCHES and len(all_filtered_items) < TARGET_ITEM_COUNT:
         batch_count += 1
@@ -157,9 +167,9 @@ def filter_and_push(db: Session, webhook_url: str, push_type: str = "manual") ->
         processed_article_ids.extend([a.id for a in unpushed_articles])
 
         content_items = []
-
         for tweet in unpushed_tweets:
             content_items.append({
+                "id": f"tweet_{tweet.id}",
                 "title": tweet.content[:50],
                 "content": tweet.content,
                 "url": tweet.url,
@@ -168,6 +178,7 @@ def filter_and_push(db: Session, webhook_url: str, push_type: str = "manual") ->
 
         for article in unpushed_articles:
             content_items.append({
+                "id": f"article_{article.id}",
                 "title": article.title,
                 "content": article.content or article.title,
                 "url": article.url,
@@ -183,6 +194,9 @@ def filter_and_push(db: Session, webhook_url: str, push_type: str = "manual") ->
             filtered_items = analyze_with_minimax(content_items)
         else:
             filtered_items = content_items[:10]
+            # 添加默认主题
+            for item in filtered_items:
+                item["topic"] = "AI资讯"
 
         if filtered_items:
             all_filtered_items.extend(filtered_items)
@@ -200,19 +214,72 @@ def filter_and_push(db: Session, webhook_url: str, push_type: str = "manual") ->
         db.commit()
         return True
 
+    # 统计主题出现频次
+    topic_counts = {}
+    for item in all_filtered_items:
+        topic = item.get("topic", "其他") or "其他"
+        if topic not in topic_counts:
+            topic_counts[topic] = []
+        topic_counts[topic].append(item)
+
+    # 分离热点主题和普通资讯
+    hot_topics = {}  # 出现次数 >= TOPIC_THRESHOLD 的主题
+    normal_items = []  # 单次出现的内容
+
+    for topic, items in topic_counts.items():
+        if len(items) >= TOPIC_THRESHOLD:
+            hot_topics[topic] = items
+        else:
+            normal_items.extend(items)
+
     # 只取目标数量的优质内容
+    target_items = all_filtered_items[:TARGET_ITEM_COUNT]
+
+    # 重新分离热点和普通
+    hot_topics_final = {}
+    normal_items_final = []
+    for item in target_items:
+        topic = item.get("topic", "其他") or "其他"
+        if topic in hot_topics:
+            if topic not in hot_topics_final:
+                hot_topics_final[topic] = []
+            hot_topics_final[topic].append(item)
+        else:
+            normal_items_final.append(item)
+
+    # 准备推送数据（保留主题信息）
     push_items = []
-    for item in all_filtered_items[:TARGET_ITEM_COUNT]:
+    for item in target_items:
         push_items.append({
             "title": item.get("title", "")[:50],
             "summary": item.get("content", "")[:150],
-            "url": item.get("url", "")
+            "url": item.get("url", ""),
+            "topic": item.get("topic", "其他") or "其他",
+            "source": item.get("source", "unknown")
         })
 
+    # 保存主题到数据库
+    for item in push_items:
+        topic = item["topic"]
+        # 从 item 中提取原始 ID
+        for orig_item in all_filtered_items:
+            if orig_item.get("title", "").startswith(item["title"][:30]):
+                orig_id = orig_item.get("id", "")
+                if orig_id.startswith("tweet_"):
+                    tweet_id = int(orig_id.split("_")[1])
+                    db.query(Tweet).filter(Tweet.id == tweet_id).update({"topic": topic})
+                elif orig_id.startswith("article_"):
+                    article_id = int(orig_id.split("_")[1])
+                    db.query(Article).filter(Article.id == article_id).update({"topic": topic})
+                break
+
+    # 调用飞书推送（传入热点主题和普通资讯）
     success = feishu.send_feishu_message(
         webhook_url=webhook_url,
         content="AI资讯每日推送",
-        items=push_items
+        items=push_items,
+        hot_topics=hot_topics_final,
+        normal_items=normal_items_final
     )
 
     push_history = PushHistory(
