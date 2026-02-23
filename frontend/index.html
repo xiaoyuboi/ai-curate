@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI资讯推送系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            opacity: 0.9;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .stat-card .number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-card .label {
+            color: #666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+        }
+
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-danger {
+            background: #ff4757;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #ff3344;
+        }
+
+        .btn-success {
+            background: #2ed573;
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #26af61;
+        }
+
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+        }
+
+        .list {
+            list-style: none;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .list-item:last-child {
+            border-bottom: none;
+        }
+
+        .list-item .info {
+            flex: 1;
+        }
+
+        .list-item .name {
+            font-weight: 500;
+        }
+
+        .list-item .desc {
+            font-size: 12px;
+            color: #888;
+            margin-top: 2px;
+        }
+
+        .list-item .actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .account-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .account-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .account-card .name {
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .account-card .username {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .account-card .actions {
+            display: flex;
+            gap: 5px;
+            margin-top: 5px;
+        }
+
+        .account-card .btn-sm {
+            flex: 1;
+            padding: 4px 8px;
+            font-size: 11px;
+        }
+
+        .search-box {
+            margin-bottom: 15px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .badge-enabled {
+            background: #e8f5e9;
+            color: #2ed573;
+        }
+
+        .badge-disabled {
+            background: #ffebee;
+            color: #ff4757;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .action-buttons .btn {
+            flex: 1;
+        }
+
+        .history-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .history-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .history-item:last-child {
+            border-bottom: none;
+        }
+
+        .history-item .time {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .history-item .status {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .status-success {
+            background: #e8f5e9;
+            color: #2ed573;
+        }
+
+        .status-failed {
+            background: #ffebee;
+            color: #ff4757;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+        }
+
+        .toast {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 20px;
+            border-radius: 6px;
+            color: white;
+            font-weight: 500;
+            z-index: 1000;
+            transform: translateX(400px);
+            transition: transform 0.3s;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-success {
+            background: #2ed573;
+        }
+
+        .toast-error {
+            background: #ff4757;
+        }
+
+        @media (max-width: 768px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI资讯推送系统</h1>
+            <p>自动抓取X( Twitter)资讯和网站内容，AI智能筛选后推送到飞书</p>
+        </header>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="number" id="stat-accounts">0</div>
+                <div class="label">Twitter账号</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="stat-websites">0</div>
+                <div class="label">监控网站</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="stat-unpushed">0</div>
+                <div class="label">待推送内容</div>
+            </div>
+            <div class="stat-card">
+                <div class="number" id="stat-pushed">0</div>
+                <div class="label">已推送次数</div>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px;">
+            <div class="card">
+                <div class="card-header">
+                    <h2>X(Twitter)账号管理</h2>
+                    <span id="account-count" style="font-size: 12px; color: #888;"></span>
+                </div>
+                <div class="card-body">
+                    <form id="twitter-form" style="display: flex; gap: 10px; align-items: flex-end;">
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label>用户名</label>
+                            <input type="text" id="twitter-username" placeholder="输入用户名" required>
+                        </div>
+                        <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                            <label>显示名称</label>
+                            <input type="text" id="twitter-name" placeholder="可选">
+                        </div>
+                        <button type="submit" class="btn btn-primary">添加</button>
+                    </form>
+
+                    <div class="search-box">
+                        <input type="text" id="account-search" placeholder="搜索账号...">
+                    </div>
+
+                    <div class="account-grid" id="twitter-list">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <h2>网站管理</h2>
+                </div>
+                <div class="card-body">
+                    <form id="website-form" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: flex-end;">
+                        <div class="form-group" style="flex: 1; min-width: 120px; margin-bottom: 0;">
+                            <label>名称</label>
+                            <input type="text" id="website-name" placeholder="名称" required>
+                        </div>
+                        <div class="form-group" style="flex: 2; min-width: 200px; margin-bottom: 0;">
+                            <label>网址</label>
+                            <input type="url" id="website-url" placeholder="https://..." required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">添加</button>
+                    </form>
+
+                    <div class="account-grid" id="website-list" style="margin-top: 15px;">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>推送配置</h2>
+            </div>
+            <div class="card-body">
+                <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px;">
+                    <div class="form-group">
+                        <label>飞书Webhook地址</label>
+                        <input type="url" id="feishu-webhook" placeholder="https://open.feishu.cn/open-apis/bot/v2/hook/xxx">
+                    </div>
+                    <div class="form-group">
+                        <label>推送频率</label>
+                        <select id="schedule-frequency" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 6px;">
+                            <option value="daily">每日</option>
+                            <option value="hourly">每小时</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="time-group">
+                        <label>推送时间</label>
+                        <input type="time" id="schedule-time" value="09:00">
+                    </div>
+                    <div class="form-group">
+                        <label>&nbsp;</label>
+                        <div style="display: flex; align-items: center; gap: 10px; margin-top: 8px;">
+                            <input type="checkbox" id="schedule-enabled">
+                            <span>启用定时推送</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="saveConfig()">保存配置</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>手动操作</h2>
+            </div>
+            <div class="card-body">
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" onclick="fetchData()">
+                        📥 仅抓取数据
+                    </button>
+                    <button class="btn btn-success" onclick="fetchAndPush()">
+                        🚀 抓取并推送
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2>推送历史</h2>
+            </div>
+            <div class="card-body">
+                <div class="history-list" id="history-list">
+                    <li class="loading">加载中...</li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+        const API_BASE = '/api';
+
+        // 显示提示
+        function showToast(message, type = 'success') {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.className = `toast toast-${type} show`;
+            setTimeout(() => {
+                toast.className = 'toast';
+            }, 3000);
+        }
+
+        // 加载统计
+        async function loadStats() {
+            try {
+                const res = await fetch(`${API_BASE}/stats`);
+                const data = await res.json();
+                document.getElementById('stat-accounts').textContent = data.twitter_accounts;
+                document.getElementById('stat-websites').textContent = data.websites;
+                document.getElementById('stat-unpushed').textContent = data.unpushed_tweets + data.unpushed_articles;
+                document.getElementById('stat-pushed').textContent = data.total_pushed;
+            } catch (e) {
+                console.error('Load stats error:', e);
+            }
+        }
+
+        // 加载Twitter账号
+        let allAccounts = [];
+
+        async function loadTwitterAccounts() {
+            try {
+                const res = await fetch(`${API_BASE}/twitter-accounts`);
+                allAccounts = await res.json();
+                document.getElementById('account-count').textContent = `共 ${allAccounts.length} 个`;
+                renderAccounts(allAccounts);
+            } catch (e) {
+                console.error('Load twitter accounts error:', e);
+            }
+        }
+
+        function renderAccounts(accounts) {
+            const list = document.getElementById('twitter-list');
+            if (accounts.length === 0) {
+                list.innerHTML = '<div style="text-align: center; padding: 20px; color: #888;">暂无账号</div>';
+                return;
+            }
+
+            list.innerHTML = accounts.map(acc => `
+                <div class="account-card">
+                    <div class="name">${acc.name || acc.username}</div>
+                    <div class="username">@${acc.username}</div>
+                    <span class="badge ${acc.enabled ? 'badge-enabled' : 'badge-disabled'}">
+                        ${acc.enabled ? '启用' : '禁用'}
+                    </span>
+                    <div class="actions">
+                        <button class="btn btn-sm btn-secondary" onclick="toggleTwitter(${acc.id})">切换</button>
+                        <button class="btn btn-sm btn-danger" onclick="deleteTwitter(${acc.id})">删除</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 搜索功能
+        document.getElementById('account-search').addEventListener('input', function(e) {
+            const keyword = e.target.value.toLowerCase();
+            const filtered = allAccounts.filter(acc =>
+                acc.username.toLowerCase().includes(keyword) ||
+                (acc.name && acc.name.toLowerCase().includes(keyword))
+            );
+            renderAccounts(filtered);
+        });
+
+        // 加载网站
+        async function loadWebsites() {
+            try {
+                const res = await fetch(`${API_BASE}/websites`);
+                const websites = await res.json();
+                const list = document.getElementById('website-list');
+
+                if (websites.length === 0) {
+                    list.innerHTML = '<div style="text-align: center; padding: 20px; color: #888;">暂无网站</div>';
+                    return;
+                }
+
+                list.innerHTML = websites.map(ws => `
+                    <div class="account-card">
+                        <div class="name">${ws.name}</div>
+                        <div class="username" style="font-size: 11px;">${ws.url}</div>
+                        <span class="badge ${ws.enabled ? 'badge-enabled' : 'badge-disabled'}">
+                            ${ws.enabled ? '启用' : '禁用'}
+                        </span>
+                        <div class="actions">
+                            <button class="btn btn-sm btn-secondary" onclick="toggleWebsite(${ws.id})">切换</button>
+                            <button class="btn btn-sm btn-danger" onclick="deleteWebsite(${ws.id})">删除</button>
+                        </div>
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error('Load websites error:', e);
+            }
+        }
+
+        // 加载配置
+        async function loadConfig() {
+            try {
+                const res = await fetch(`${API_BASE}/push-config`);
+                const config = await res.json();
+                document.getElementById('feishu-webhook').value = config.feishu_webhook || '';
+                document.getElementById('schedule-time').value = config.schedule_time || '09:00';
+                document.getElementById('schedule-frequency').value = config.schedule_frequency || 'daily';
+                document.getElementById('schedule-enabled').checked = config.schedule_enabled;
+                // 根据频率显示/隐藏时间选择
+                document.getElementById('time-group').style.display = config.schedule_frequency === 'hourly' ? 'none' : 'block';
+            } catch (e) {
+                console.error('Load config error:', e);
+            }
+        }
+
+        // 加载历史
+        async function loadHistory() {
+            try {
+                const res = await fetch(`${API_BASE}/push-history`);
+                const history = await res.json();
+                const list = document.getElementById('history-list');
+
+                if (history.length === 0) {
+                    list.innerHTML = '<li class="list-item">暂无推送记录</li>';
+                    return;
+                }
+
+                list.innerHTML = history.map(h => `
+                    <div class="history-item">
+                        <div>
+                            <div>${h.content}</div>
+                            <div class="time">${new Date(h.pushed_at).toLocaleString()} · ${h.push_type}</div>
+                        </div>
+                        <span class="status status-${h.status}">${h.status === 'success' ? '成功' : '失败'}</span>
+                    </div>
+                `).join('');
+            } catch (e) {
+                console.error('Load history error:', e);
+            }
+        }
+
+        // 添加Twitter账号
+        document.getElementById('twitter-form').onsubmit = async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('twitter-username').value.trim();
+            const name = document.getElementById('twitter-name').value.trim();
+
+            if (!username) return;
+
+            try {
+                const res = await fetch(`${API_BASE}/twitter-accounts`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({username, name})
+                });
+
+                if (res.ok) {
+                    showToast('添加成功');
+                    document.getElementById('twitter-username').value = '';
+                    document.getElementById('twitter-name').value = '';
+                    loadTwitterAccounts();
+                    loadStats();
+                } else {
+                    const err = await res.json();
+                    showToast(err.detail || '添加失败', 'error');
+                }
+            } catch (e) {
+                showToast('添加失败', 'error');
+            }
+        };
+
+        // 添加网站
+        document.getElementById('website-form').onsubmit = async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('website-name').value.trim();
+            const url = document.getElementById('website-url').value.trim();
+            const selector = document.getElementById('website-selector').value.trim();
+
+            if (!name || !url) return;
+
+            try {
+                const res = await fetch(`${API_BASE}/websites`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({name, url, selector: selector || null})
+                });
+
+                if (res.ok) {
+                    showToast('添加成功');
+                    document.getElementById('website-name').value = '';
+                    document.getElementById('website-url').value = '';
+                    document.getElementById('website-selector').value = '';
+                    loadWebsites();
+                    loadStats();
+                } else {
+                    showToast('添加失败', 'error');
+                }
+            } catch (e) {
+                showToast('添加失败', 'error');
+            }
+        };
+
+        // 切换Twitter账号状态
+        async function toggleTwitter(id) {
+            try {
+                await fetch(`${API_BASE}/twitter-accounts/${id}/toggle`, {method: 'PATCH'});
+                loadTwitterAccounts();
+            } catch (e) {
+                showToast('操作失败', 'error');
+            }
+        }
+
+        // 删除Twitter账号
+        async function deleteTwitter(id) {
+            if (!confirm('确定删除?')) return;
+            try {
+                await fetch(`${API_BASE}/twitter-accounts/${id}`, {method: 'DELETE'});
+                loadTwitterAccounts();
+                loadStats();
+            } catch (e) {
+                showToast('删除失败', 'error');
+            }
+        }
+
+        // 切换网站状态
+        async function toggleWebsite(id) {
+            try {
+                await fetch(`${API_BASE}/websites/${id}/toggle`, {method: 'PATCH'});
+                loadWebsites();
+            } catch (e) {
+                showToast('操作失败', 'error');
+            }
+        }
+
+        // 删除网站
+        async function deleteWebsite(id) {
+            if (!confirm('确定删除?')) return;
+            try {
+                await fetch(`${API_BASE}/websites/${id}`, {method: 'DELETE'});
+                loadWebsites();
+                loadStats();
+            } catch (e) {
+                showToast('删除失败', 'error');
+            }
+        }
+
+        // 保存配置
+        async function saveConfig() {
+            const feishu_webhook = document.getElementById('feishu-webhook').value.trim();
+            const schedule_time = document.getElementById('schedule-time').value;
+            const schedule_frequency = document.getElementById('schedule-frequency').value;
+            const schedule_enabled = document.getElementById('schedule-enabled').checked;
+
+            try {
+                const res = await fetch(`${API_BASE}/push-config`, {
+                    method: 'PUT',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({
+                        feishu_webhook,
+                        schedule_time,
+                        schedule_frequency,
+                        schedule_enabled
+                    })
+                });
+
+                if (res.ok) {
+                    showToast('配置已保存');
+                } else {
+                    showToast('保存失败', 'error');
+                }
+            } catch (e) {
+                showToast('保存失败', 'error');
+            }
+        }
+
+        // 抓取数据
+        async function fetchData() {
+            const btn = event.target;
+            btn.disabled = true;
+            btn.textContent = '抓取中...';
+            try {
+                const res = await fetch(`${API_BASE}/fetch`, {method: 'POST'});
+                const data = await res.json();
+
+                if (res.ok) {
+                    showToast(`抓取完成: ${data.tweets_fetched}条推文, ${data.articles_fetched}篇文章`);
+                    loadStats();
+                } else {
+                    showToast(data.detail || '抓取失败', 'error');
+                }
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '📥 仅抓取数据';
+            }
+            } catch (e) {
+                showToast('抓取失败', 'error');
+            }
+        }
+
+        // 抓取并推送
+        async function fetchAndPush() {
+            const btn = event.target;
+            btn.disabled = true;
+            btn.textContent = '处理中...';
+            try {
+                const res = await fetch(`${API_BASE}/fetch-and-push`, {method: 'POST'});
+                const data = await res.json();
+
+                if (res.ok) {
+                    showToast(data.message || '推送完成');
+                    loadStats();
+                    loadHistory();
+                } else {
+                    showToast(data.detail || '操作失败', 'error');
+                }
+            } catch (e) {
+                showToast('操作失败', 'error');
+            } finally {
+                btn.disabled = false;
+                btn.textContent = '🚀 抓取并推送';
+            }
+        }
+
+        // 初始化
+        async function init() {
+            await Promise.all([
+                loadStats(),
+                loadTwitterAccounts(),
+                loadWebsites(),
+                loadConfig(),
+                loadHistory()
+            ]);
+
+            // 搜索功能
+            document.getElementById('account-search').addEventListener('input', function(e) {
+                const keyword = e.target.value.toLowerCase();
+                const filtered = allAccounts.filter(acc =>
+                    acc.username.toLowerCase().includes(keyword) ||
+                    (acc.name && acc.name.toLowerCase().includes(keyword))
+                );
+                renderAccounts(filtered);
+            });
+        }
+
+        // 频率选择变化时显示/隐藏时间
+        document.getElementById('schedule-frequency').addEventListener('change', function() {
+            document.getElementById('time-group').style.display = this.value === 'hourly' ? 'none' : 'block';
+        });
+
+        init();
+    </script>
+</body>
+</html>
