@@ -16,12 +16,12 @@ def required_env(name: str) -> str:
 
 
 def main() -> None:
-    smtp_host = os.getenv("SMTP_HOST", "smtp.gmail.com").strip() or "smtp.gmail.com"
-    smtp_port = int(os.getenv("SMTP_PORT", "587"))
+    smtp_host = (os.getenv("SMTP_HOST") or "smtp.gmail.com").strip() or "smtp.gmail.com"
+    smtp_port = int((os.getenv("SMTP_PORT") or "587").strip() or "587")
     smtp_user = required_env("SMTP_USER")
     smtp_pass = required_env("SMTP_PASS")
     mail_to = required_env("MAIL_TO")
-    subject = (os.getenv("MAIL_SUBJECT") or "AI 日报").strip()
+    subject = (os.getenv("MAIL_SUBJECT") or "AI 日报").strip() or "AI 日报"
 
     if not LATEST_MD.exists():
         raise RuntimeError(f"latest.md not found: {LATEST_MD}")
