@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-04-20T15:30:47.051472+08:00",
+  "repository": "xiaoyuboi/ai-curate",
+  "news": [
+    {
+      "id": "hn-47793411",
+      "source": "Hacker News",
+      "title": "Claude Opus 4.7",
+      "summary": "Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "published_at": "2026-04-16T14:23:50Z",
+      "score": 4842,
+      "title_cn": "Claude Opus 4.7",
+      "summary_cn": "Claude Opus 4.7发布，带来新功能和改进。",
+      "highlights": [
+        "新功能发布",
+        "性能提升",
+        "用户体验优化"
+      ],
+      "why_it_matters": "新版本可能提升用户的工作效率。"
+    },
+    {
+      "id": "hn-47806725",
+      "source": "Hacker News",
+      "title": "Claude Design",
+      "summary": "Related: <a href=\"https:&#x2F;&#x2F;x.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458</a> (<a href=\"https:&#x2F;&#x2F;x…",
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "published_at": "2026-04-17T15:04:09Z",
+      "score": 2720,
+      "title_cn": "Claude Design",
+      "summary_cn": "Claude Design相关信息发布，展示了新设计理念。",
+      "highlights": [
+        "新设计理念",
+        "用户界面改进",
+        "功能增强"
+      ],
+      "why_it_matters": "设计改进可能提升用户满意度。"
+    },
+    {
+      "id": "hn-47792764",
+      "source": "Hacker News",
+      "title": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+      "summary": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+      "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "published_at": "2026-04-16T13:36:27Z",
+      "score": 2328,
+      "title_cn": "Qwen3.6-35B-A3B: 开放的编码能力",
+      "summary_cn": "Qwen3.6-35B-A3B发布，现已向所有人开放编码能力。",
+      "highlights": [
+        "开放编码能力",
+        "技术普及",
+        "用户友好"
+      ],
+      "why_it_matters": "促进了更多开发者的参与和创新。"
+    },
+    {
+      "id": "hn-47796469",
+      "source": "Hacker News",
+      "title": "Codex for almost everything",
+      "summary": "Codex for almost everything",
+      "url": "https://openai.com/index/codex-for-almost-everything/",
+      "published_at": "2026-04-16T17:12:19Z",
+      "score": 2106,
+      "title_cn": "几乎所有事物的Codex",
+      "summary_cn": "Codex工具扩展至几乎所有应用场景，提升开发效率。",
+      "highlights": [
+        "工具扩展",
+        "开发效率提升",
+        "广泛应用"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-46108780",
+      "source": "Hacker News",
+      "title": "DeepSeek-v3.2: Pushing the frontier of open large language models [pdf]",
+      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2</a><p><a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#…",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf",
+      "published_at": "2025-12-01T15:48:03Z",
+      "score": 1912,
+      "title_cn": "DeepSeek-v3.2: 推动开放大型语言模型的前沿",
+      "summary_cn": "DeepSeek-v3.2发布，推动开放大型语言模型的发展。",
+      "highlights": [
+        "开放模型",
+        "技术前沿",
+        "研究进展"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47807006",
+      "source": "Hacker News",
+      "title": "Measuring Claude 4.7's tokenizer costs",
+      "summary": "Measuring Claude 4.7's tokenizer costs",
+      "url": "https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you",
+      "published_at": "2026-04-17T15:29:36Z",
+      "score": 1693,
+      "title_cn": "测量Claude 4.7的分词器成本",
+      "summary_cn": "对Claude 4.7的新分词器成本进行了测量与分析。",
+      "highlights": [
+        "成本分析",
+        "技术评估",
+        "实用信息"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47717587",
+      "source": "Hacker News",
+      "title": "OpenAI backs Illinois bill that would limit when AI labs can be held liable",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.md&#x2F;WzwBY\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.md&#x2F;WzwBY</a>",
+      "url": "https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/",
+      "published_at": "2026-04-10T13:08:43Z",
+      "score": 1095,
+      "title_cn": "OpenAI支持伊利诺伊州限制AI实验室责任的法案",
+      "summary_cn": "OpenAI支持一项法案，限制AI实验室的法律责任。",
+      "highlights": [
+        "法律支持",
+        "责任限制",
+        "行业影响"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47788385",
+      "source": "Hacker News",
+      "title": "The local LLM ecosystem doesn’t need Ollama",
+      "summary": "The local LLM ecosystem doesn’t need Ollama",
+      "url": "https://sleepingrobots.com/dreams/stop-using-ollama/",
+      "published_at": "2026-04-16T03:35:11Z",
+      "score": 1056,
+      "title_cn": "本地LLM生态系统不需要Ollama",
+      "summary_cn": "分析认为本地LLM生态系统不需要Ollama的支持。",
+      "highlights": [
+        "生态分析",
+        "市场竞争",
+        "技术独立"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    }
+  ],
+  "repos": [
+    {
+      "name": "HKUDS/nanobot",
+      "url": "https://github.com/HKUDS/nanobot",
+      "description": "\"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\"",
+      "language": "Python",
+      "stars": 40136,
+      "forks": 7062,
+      "updated_at": "2026-04-20T07:00:04Z",
+      "topics": [
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "anthropic",
+        "chatgpt",
+        "claude",
+        "claude-code",
+        "codex",
+        "llm",
+        "nanobot",
+        "openai",
+        "openclaw"
+      ],
+      "score": 290.45,
+      "desc_cn": "超轻量级设计，适合个人使用",
+      "highlights": [
+        "\"🐈 nanobot: The Ultra-Lightweight Personal AI Agent\""
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "volcengine/OpenViking",
+      "url": "https://github.com/volcengine/OpenViking",
+      "description": "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system pa…",
+      "language": "Python",
+      "stars": 22610,
+      "forks": 1647,
+      "updated_at": "2026-04-20T06:34:39Z",
+      "topics": [
+        "agent",
+        "agentic-rag",
+        "ai-agents",
+        "clawbot",
+        "context-database",
+        "context-engineering",
+        "filesystem",
+        "llm",
+        "memory",
+        "openclaw",
+        "opencode",
+        "rag",
+        "skill"
+      ],
+      "score": 276.02,
+      "desc_cn": "专为AI代理设计的上下文数据库",
+      "highlights": [
+        "OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system pa…"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "lsdefine/GenericAgent",
+      "url": "https://github.com/lsdefine/GenericAgent",
+      "description": "Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption",
+      "language": "Python",
+      "stars": 4693,
+      "forks": 499,
+      "updated_at": "2026-04-20T07:27:55Z",
+      "topics": [
+        "ai-agent",
+        "automation",
+        "autonomous-agent",
+        "browser-automation",
+        "claude",
+        "computer-control",
+        "desktop-automation",
+        "gemini",
+        "lightweight",
+        "llm-agent",
+        "memory-system",
+        "python",
+        "self-evolving",
+        "skill-tree",
+        "task-automation"
+      ],
+      "score": 247.67,
+      "desc_cn": "自我进化的智能体，具备强大的学习能力。",
+      "highlights": [
+        "Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "1186258278/OpenClawChineseTranslation",
+      "url": "https://github.com/1186258278/OpenClawChineseTranslation",
+      "description": "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！",
+      "language": "JavaScript",
+      "stars": 3718,
+      "forks": 464,
+      "updated_at": "2026-04-20T06:41:33Z",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "chatbot",
+        "chinese",
+        "claude-ai",
+        "clawd",
+        "clawdbot",
+        "discord",
+        "llm",
+        "lobster",
+        "localization",
+        "moltbot",
+        "nodejs",
+        "open-source",
+        "openclaw",
+        "telegram",
+        "tool-calling",
+        "whatsapp",
+        "zh-cn"
+      ],
+      "score": 243.89,
+      "desc_cn": "支持多平台接入，包括WhatsApp、Telegram和Discord",
+      "highlights": [
+        "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "holaboss-ai/holaOS",
+      "url": "https://github.com/holaboss-ai/holaOS",
+      "description": "The agent environment for long-horizon work, continuity, and self-evolution.",
+      "language": "TypeScript",
+      "stars": 2993,
+      "forks": 234,
+      "updated_at": "2026-04-20T06:37:48Z",
+      "topics": [
+        "agent",
+        "agent-harness",
+        "agent-runtime",
+        "agentic",
+        "ai",
+        "ai-agent",
+        "ai-agents",
+        "artificial-intelligence",
+        "electron",
+        "holaboss",
+        "holaos",
+        "llm",
+        "mcp",
+        "memory",
+        "model-context-protocol",
+        "proactive",
+        "proactive-ai",
+        "runtime",
+        "typescript",
+        "workspace"
+      ],
+      "score": 237.9,
+      "desc_cn": "支持长时间任务的智能体环境",
+      "highlights": [
+        "The agent environment for long-horizon work, continuity, and self-evolution."
+      ],
+      "why_watch": "适合继续跟踪。"
+    }
+  ],
+  "takeaway": "今天的开源趋势显示，轻量级AI工具和智能体环境受到关注，尤其是针对个人和多平台接入的解决方案。"
+}
