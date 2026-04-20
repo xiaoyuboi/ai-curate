@@ -44,6 +44,23 @@ permissions:
 
 如果后面想换模型，可以修改 `.github/workflows/daily-ai-brief.yml` 中的 `GITHUB_MODELS_MODEL`。
 
+## 邮箱推送（Gmail SMTP）
+
+现在工作流已支持生成日报后自动发邮件。
+
+需要在仓库 `Settings -> Secrets and variables -> Actions` 里配置这些 secrets：
+
+- `SMTP_USER`：你的 Gmail 地址
+- `SMTP_PASS`：Gmail 16 位应用专用密码
+- `MAIL_TO`：收件邮箱
+- `SMTP_HOST`：可选，默认 `smtp.gmail.com`
+- `SMTP_PORT`：可选，默认 `587`
+
+注意：
+- `SMTP_PASS` 必须是 Gmail 应用专用密码，不是 Gmail 登录密码
+- 这些值不要写进代码，也不要提交到仓库
+- 如果 `SMTP_USER / SMTP_PASS / MAIL_TO` 没配，workflow 会跳过邮件步骤，不影响日报生成
+
 ## 本地运行
 
 ```bash
