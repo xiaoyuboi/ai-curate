@@ -13,6 +13,12 @@ jobs:
   generate-report:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASS: ${{ secrets.SMTP_PASS }}
+      MAIL_TO: ${{ secrets.MAIL_TO }}
 
     steps:
       - name: Checkout
@@ -36,13 +42,8 @@ jobs:
         run: python scripts/generate_daily_report.py
 
       - name: Send report email
-        if: ${{ secrets.SMTP_USER != '' && secrets.SMTP_PASS != '' && secrets.MAIL_TO != '' }}
+        if: ${{ env.SMTP_USER != '' && env.SMTP_PASS != '' && env.MAIL_TO != '' }}
         env:
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
-          SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
-          SMTP_PASS: ${{ secrets.SMTP_PASS }}
-          MAIL_TO: ${{ secrets.MAIL_TO }}
           MAIL_SUBJECT: AI 日报 - ${{ github.run_started_at }}
         run: python scripts/send_email_report.py
 
