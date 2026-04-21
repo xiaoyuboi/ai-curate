@@ -1,0 +1,284 @@
+{
+  "generated_at": "2026-04-21T08:33:59.446427+08:00",
+  "repository": "xiaoyuboi/ai-curate",
+  "news": [
+    {
+      "id": "hn-47793411",
+      "source": "Hacker News",
+      "title": "Claude Opus 4.7",
+      "summary": "Claude Opus 4.7",
+      "url": "https://www.anthropic.com/news/claude-opus-4-7",
+      "published_at": "2026-04-16T14:23:50Z",
+      "score": 4854,
+      "title_cn": "Claude Opus 4.7发布",
+      "summary_cn": "Claude Opus 4.7版本现已发布，带来新功能和改进。",
+      "highlights": [
+        "新功能",
+        "性能提升",
+        "用户体验改善"
+      ],
+      "why_it_matters": "新版本可能提升用户的工作效率和体验。"
+    },
+    {
+      "id": "hn-47806725",
+      "source": "Hacker News",
+      "title": "Claude Design",
+      "summary": "Related: <a href=\"https:&#x2F;&#x2F;x.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458</a> (<a href=\"https:&#x2F;&#x2F;x…",
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "published_at": "2026-04-17T15:04:09Z",
+      "score": 2735,
+      "title_cn": "Claude Design发布",
+      "summary_cn": "Claude Design为用户提供了新的设计工具和资源。",
+      "highlights": [
+        "设计工具",
+        "用户友好",
+        "资源丰富"
+      ],
+      "why_it_matters": "为设计师提供了更好的创作平台，促进创新。"
+    },
+    {
+      "id": "hn-47792764",
+      "source": "Hacker News",
+      "title": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+      "summary": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+      "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "published_at": "2026-04-16T13:36:27Z",
+      "score": 2331,
+      "title_cn": "Qwen3.6-35B-A3B发布",
+      "summary_cn": "Qwen3.6-35B-A3B现已开放，提供强大的编码能力。",
+      "highlights": [
+        "开放访问",
+        "编码能力强",
+        "用户友好"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47796469",
+      "source": "Hacker News",
+      "title": "Codex for almost everything",
+      "summary": "Codex for almost everything",
+      "url": "https://openai.com/index/codex-for-almost-everything/",
+      "published_at": "2026-04-16T17:12:19Z",
+      "score": 2108,
+      "title_cn": "Codex几乎涵盖所有领域",
+      "summary_cn": "Codex工具现已扩展到几乎所有应用领域。",
+      "highlights": [
+        "广泛应用",
+        "功能强大",
+        "易于使用"
+      ],
+      "why_it_matters": "为开发者提供了更全面的工具支持。"
+    },
+    {
+      "id": "hn-46108780",
+      "source": "Hacker News",
+      "title": "DeepSeek-v3.2: Pushing the frontier of open large language models [pdf]",
+      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2</a><p><a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#…",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf",
+      "published_at": "2025-12-01T15:48:03Z",
+      "score": 1912,
+      "title_cn": "DeepSeek-v3.2发布",
+      "summary_cn": "DeepSeek-v3.2推动开放大型语言模型的前沿发展。",
+      "highlights": [
+        "前沿技术",
+        "开放模型",
+        "研究进展"
+      ],
+      "why_it_matters": "促进了AI研究的开放性和透明度。"
+    },
+    {
+      "id": "hn-47807006",
+      "source": "Hacker News",
+      "title": "Measuring Claude 4.7's tokenizer costs",
+      "summary": "Measuring Claude 4.7's tokenizer costs",
+      "url": "https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you",
+      "published_at": "2026-04-17T15:29:36Z",
+      "score": 1698,
+      "title_cn": "Claude 4.7的tokenizer成本测量",
+      "summary_cn": "对Claude 4.7的新tokenizer进行了成本测量。",
+      "highlights": [
+        "成本分析",
+        "性能评估",
+        "技术细节"
+      ],
+      "why_it_matters": "帮助开发者理解使用成本，优化资源配置。"
+    },
+    {
+      "id": "hn-47831621",
+      "source": "Hacker News",
+      "title": "GitHub's fake star economy",
+      "summary": "GitHub's fake star economy",
+      "url": "https://awesomeagents.ai/news/github-fake-stars-investigation/",
+      "published_at": "2026-04-20T08:26:52Z",
+      "score": 1445,
+      "title_cn": "GitHub虚假星星经济调查",
+      "summary_cn": "对GitHub平台上虚假星星现象进行了调查。",
+      "highlights": [
+        "虚假星星",
+        "平台影响",
+        "调查结果"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47717587",
+      "source": "Hacker News",
+      "title": "OpenAI backs Illinois bill that would limit when AI labs can be held liable",
+      "summary": "<a href=\"https:&#x2F;&#x2F;archive.md&#x2F;WzwBY\" rel=\"nofollow\">https:&#x2F;&#x2F;archive.md&#x2F;WzwBY</a>",
+      "url": "https://www.wired.com/story/openai-backs-bill-exempt-ai-firms-model-harm-lawsuits/",
+      "published_at": "2026-04-10T13:08:43Z",
+      "score": 1095,
+      "title_cn": "OpenAI支持伊利诺伊州法案",
+      "summary_cn": "OpenAI支持一项限制AI实验室责任的法案。",
+      "highlights": [
+        "法律支持",
+        "责任限制",
+        "行业影响"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    }
+  ],
+  "repos": [
+    {
+      "name": "ZhuLinsen/daily_stock_analysis",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "description": "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets.",
+      "language": "Python",
+      "stars": 30661,
+      "forks": 31347,
+      "updated_at": "2026-04-20T22:43:53Z",
+      "topics": [
+        "agent",
+        "ai",
+        "aigc",
+        "gemini",
+        "llm",
+        "quant",
+        "quantitative-trading",
+        "rag",
+        "stock"
+      ],
+      "score": 248.58,
+      "desc_cn": "集成多数据源，提供全面的市场行情分析",
+      "highlights": [
+        "LLM驱动的 A/H/美股智能分析器：多数据源行情 + 实时新闻 + LLM决策仪表盘 + 多渠道推送，零成本定时运行，纯白嫖. LLM-powered stock analysis system for A/H/US markets."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "1186258278/OpenClawChineseTranslation",
+      "url": "https://github.com/1186258278/OpenClawChineseTranslation",
+      "description": "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！",
+      "language": "JavaScript",
+      "stars": 3723,
+      "forks": 465,
+      "updated_at": "2026-04-20T23:31:42Z",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "chatbot",
+        "chinese",
+        "claude-ai",
+        "clawd",
+        "clawdbot",
+        "discord",
+        "llm",
+        "lobster",
+        "localization",
+        "moltbot",
+        "nodejs",
+        "open-source",
+        "openclaw",
+        "telegram",
+        "tool-calling",
+        "whatsapp",
+        "zh-cn"
+      ],
+      "score": 240.05,
+      "desc_cn": "支持多平台接入，包括WhatsApp、Telegram和Discord",
+      "highlights": [
+        "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "moltis-org/moltis",
+      "url": "https://github.com/moltis-org/moltis",
+      "description": "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, Telegram, WhatsApp, Discord, Teams, and MCP tools. Secure by design, runs on your hardware.",
+      "language": "Rust",
+      "stars": 2577,
+      "forks": 302,
+      "updated_at": "2026-04-21T00:05:24Z",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "clawdbot",
+        "llm",
+        "mcp",
+        "openclaw",
+        "rust",
+        "sandbox",
+        "self-hosted",
+        "single-binary",
+        "telegram-bot",
+        "voice-assistant"
+      ],
+      "score": 236.68,
+      "desc_cn": "安全设计，确保用户数据隐私",
+      "highlights": [
+        "A secure persistent personal agent server in Rust. One binary, sandboxed execution, multi-provider LLMs, voice, memory, Telegram, WhatsApp, Discord, Teams, and MCP tools. Secure by design, runs on your hardware."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "affaan-m/everything-claude-code",
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 162132,
+      "forks": 25202,
+      "updated_at": "2026-04-19T21:02:52Z",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "score": 223.97,
+      "desc_cn": "集成多种AI代理技术，提升开发效率。",
+      "highlights": [
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "language": "Python",
+      "stars": 48480,
+      "forks": 6343,
+      "updated_at": "2026-04-20T18:46:51Z",
+      "topics": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory",
+        "python"
+      ],
+      "score": 213.44,
+      "desc_cn": "高性能的AI记忆系统，适合各种应用场景。",
+      "highlights": [
+        "The best-benchmarked open-source AI memory system. And it's free."
+      ],
+      "why_watch": "适合继续跟踪。"
+    }
+  ],
+  "takeaway": "今天的开源趋势显示，AI工具和数据分析平台持续受到关注，尤其是集成多种技术以提升用户体验和开发效率。"
+}
