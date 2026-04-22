@@ -1,0 +1,285 @@
+{
+  "generated_at": "2026-04-22T08:30:54.513311+08:00",
+  "repository": "xiaoyuboi/ai-curate",
+  "news": [
+    {
+      "id": "hn-47806725",
+      "source": "Hacker News",
+      "title": "Claude Design",
+      "summary": "Related: <a href=\"https:&#x2F;&#x2F;x.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458\" rel=\"nofollow\">https:&#x2F;&#x2F;x.com&#x2F;flomerboy&#x2F;status&#x2F;2045162321589252458</a> (<a href=\"https:&#x2F;&#x2F;x…",
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "published_at": "2026-04-17T15:04:09Z",
+      "score": 2744,
+      "title_cn": "Claude设计",
+      "summary_cn": "Claude设计的相关信息可在Anthropic Labs网站上找到，涉及最新的设计理念和应用。",
+      "highlights": [
+        "Claude设计",
+        "Anthropic Labs",
+        "最新应用"
+      ],
+      "why_it_matters": "展示了AI设计的最新进展，可能影响未来的AI产品开发。"
+    },
+    {
+      "id": "hn-47792764",
+      "source": "Hacker News",
+      "title": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+      "summary": "Qwen3.6-35B-A3B: Agentic coding power, now open to all",
+      "url": "https://qwen.ai/blog?id=qwen3.6-35b-a3b",
+      "published_at": "2026-04-16T13:36:27Z",
+      "score": 2334,
+      "title_cn": "Qwen3.6-35B-A3B：开放的智能编码能力",
+      "summary_cn": "Qwen3.6-35B-A3B现已向所有人开放，提供强大的智能编码能力。",
+      "highlights": [
+        "Qwen3.6-35B-A3B",
+        "智能编码",
+        "开放访问"
+      ],
+      "why_it_matters": "推动了编码技术的民主化，促进了开发者的创新。"
+    },
+    {
+      "id": "hn-47796469",
+      "source": "Hacker News",
+      "title": "Codex for almost everything",
+      "summary": "Codex for almost everything",
+      "url": "https://openai.com/index/codex-for-almost-everything/",
+      "published_at": "2026-04-16T17:12:19Z",
+      "score": 2108,
+      "title_cn": "几乎所有事物的Codex",
+      "summary_cn": "Codex为几乎所有事物提供支持，展示了其广泛的应用潜力。",
+      "highlights": [
+        "Codex",
+        "广泛应用",
+        "技术支持"
+      ],
+      "why_it_matters": "提升了AI在各领域的适用性，推动了技术的普及。"
+    },
+    {
+      "id": "hn-46108780",
+      "source": "Hacker News",
+      "title": "DeepSeek-v3.2: Pushing the frontier of open large language models [pdf]",
+      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2</a><p><a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#…",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf",
+      "published_at": "2025-12-01T15:48:03Z",
+      "score": 1912,
+      "title_cn": "DeepSeek-v3.2：推动开放大型语言模型的前沿",
+      "summary_cn": "DeepSeek-v3.2推动了开放大型语言模型的研究，相关文档可在线获取。",
+      "highlights": [
+        "DeepSeek-v3.2",
+        "开放模型",
+        "研究前沿"
+      ],
+      "why_it_matters": "促进了语言模型的开放研究，可能影响未来的AI发展。"
+    },
+    {
+      "id": "hn-47807006",
+      "source": "Hacker News",
+      "title": "Measuring Claude 4.7's tokenizer costs",
+      "summary": "Measuring Claude 4.7's tokenizer costs",
+      "url": "https://www.claudecodecamp.com/p/i-measured-claude-4-7-s-new-tokenizer-here-s-what-it-costs-you",
+      "published_at": "2026-04-17T15:29:36Z",
+      "score": 1702,
+      "title_cn": "测量Claude 4.7的分词器成本",
+      "summary_cn": "对Claude 4.7的新分词器成本进行了测量，提供了详细的分析。",
+      "highlights": [
+        "Claude 4.7",
+        "分词器成本",
+        "详细分析"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47839951",
+      "source": "Hacker News",
+      "title": "AI Resistance: some recent anti-AI stuff that’s worth discussing",
+      "summary": "AI Resistance: some recent anti-AI stuff that’s worth discussing",
+      "url": "https://stephvee.ca/blog/artificial%20intelligence/ai-resistance-is-growing/",
+      "published_at": "2026-04-20T20:19:13Z",
+      "score": 1186,
+      "title_cn": "AI抵抗：值得讨论的反AI现象",
+      "summary_cn": "探讨了近期一些反对AI的现象，值得引起关注和讨论。",
+      "highlights": [
+        "AI抵抗",
+        "反对现象",
+        "讨论价值"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47835928",
+      "source": "Hacker News",
+      "title": "Deezer says 44% of songs uploaded to its platform daily are AI-generated",
+      "summary": "Deezer says 44% of songs uploaded to its platform daily are AI-generated",
+      "url": "https://techcrunch.com/2026/04/20/deezer-says-44-of-songs-uploaded-to-its-platform-daily-are-ai-generated/",
+      "published_at": "2026-04-20T15:41:02Z",
+      "score": 1114,
+      "title_cn": "Deezer称每日上传歌曲中44%为AI生成",
+      "summary_cn": "Deezer表示，平台上每日上传的歌曲中有44%是AI生成的，显示了AI在音乐创作中的影响。",
+      "highlights": [
+        "Deezer",
+        "AI生成歌曲",
+        "音乐创作"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47788385",
+      "source": "Hacker News",
+      "title": "The local LLM ecosystem doesn’t need Ollama",
+      "summary": "The local LLM ecosystem doesn’t need Ollama",
+      "url": "https://sleepingrobots.com/dreams/stop-using-ollama/",
+      "published_at": "2026-04-16T03:35:11Z",
+      "score": 1059,
+      "title_cn": "本地LLM生态系统不需要Ollama",
+      "summary_cn": "讨论了本地大型语言模型生态系统的独立性，认为不需要Ollama的支持。",
+      "highlights": [
+        "本地LLM",
+        "Ollama",
+        "生态系统独立"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    }
+  ],
+  "repos": [
+    {
+      "name": "affaan-m/everything-claude-code",
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 163160,
+      "forks": 25335,
+      "updated_at": "2026-04-21T22:41:38Z",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "score": 273.14,
+      "desc_cn": "集成多种AI代理技术，提升开发效率。",
+      "highlights": [
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "1186258278/OpenClawChineseTranslation",
+      "url": "https://github.com/1186258278/OpenClawChineseTranslation",
+      "description": "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！",
+      "language": "JavaScript",
+      "stars": 3724,
+      "forks": 464,
+      "updated_at": "2026-04-22T00:12:06Z",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "chatbot",
+        "chinese",
+        "claude-ai",
+        "clawd",
+        "clawdbot",
+        "discord",
+        "llm",
+        "lobster",
+        "localization",
+        "moltbot",
+        "nodejs",
+        "open-source",
+        "openclaw",
+        "telegram",
+        "tool-calling",
+        "whatsapp",
+        "zh-cn"
+      ],
+      "score": 243.91,
+      "desc_cn": "支持多平台接入，包括WhatsApp、Telegram和Discord",
+      "highlights": [
+        "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "jundot/omlx",
+      "url": "https://github.com/jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+      "language": "Python",
+      "stars": 10970,
+      "forks": 956,
+      "updated_at": "2026-04-21T23:11:52Z",
+      "topics": [
+        "apple-silicon",
+        "inference-server",
+        "llm",
+        "macos",
+        "mlx",
+        "openai-api"
+      ],
+      "score": 239.56,
+      "desc_cn": "支持Apple Silicon，优化性能",
+      "highlights": [
+        "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "alvinreal/awesome-opensource-ai",
+      "url": "https://github.com/alvinreal/awesome-opensource-ai",
+      "description": "Curated list of the best truly open-source AI projects, models, tools, and infrastructure.",
+      "language": "Python",
+      "stars": 2861,
+      "forks": 269,
+      "updated_at": "2026-04-22T00:17:34Z",
+      "topics": [
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "awesome",
+        "awesome-list",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mlops",
+        "open-source",
+        "open-source-ai",
+        "rag"
+      ],
+      "score": 237.78,
+      "desc_cn": "包含众多高质量的开源AI项目",
+      "highlights": [
+        "Curated list of the best truly open-source AI projects, models, tools, and infrastructure."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "rocketride-org/rocketride-server",
+      "url": "https://github.com/rocketride-org/rocketride-server",
+      "description": "High-performance AI pipeline engine with a C++ core and 50+ Python-extensible nodes. Build, debug, and scale LLM workflows with 13+ model providers, 8+ vector databases, and agent orchestration, all from your IDE. Inclu…",
+      "language": "C++",
+      "stars": 1873,
+      "forks": 47,
+      "updated_at": "2026-04-21T23:30:10Z",
+      "topics": [
+        "ai",
+        "cpp",
+        "data-pipeline",
+        "data-processing",
+        "machine-learning",
+        "mcp",
+        "python",
+        "sdk",
+        "typescript",
+        "vscode-extension"
+      ],
+      "score": 222.84,
+      "desc_cn": "高性能AI管道引擎，支持多种模型和数据库",
+      "highlights": [
+        "High-performance AI pipeline engine with a C++ core and 50+ Python-extensible nodes. Build, debug, and scale LLM workflows with 13+ model providers, 8+ vector databases, and agent orchestration, all from your IDE. Inclu…"
+      ],
+      "why_watch": "适合继续跟踪。"
+    }
+  ],
+  "takeaway": "今天的开源趋势显示，AI代理和多平台接入工具受到关注，同时高性能AI管道引擎和优化项目也在不断发展。"
+}
