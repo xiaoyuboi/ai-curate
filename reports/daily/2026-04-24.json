@@ -1,0 +1,285 @@
+{
+  "generated_at": "2026-04-24T08:35:32.255508+08:00",
+  "repository": "xiaoyuboi/ai-curate",
+  "news": [
+    {
+      "id": "hn-47879092",
+      "source": "Hacker News",
+      "title": "GPT-5.5",
+      "summary": "GPT-5.5",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "published_at": "2026-04-23T18:01:39Z",
+      "score": 2386,
+      "title_cn": "GPT-5.5发布",
+      "summary_cn": "OpenAI发布了GPT-5.5，进一步提升了模型的性能和应用范围。",
+      "highlights": [
+        "GPT-5.5发布",
+        "性能提升",
+        "应用范围扩大"
+      ],
+      "why_it_matters": "GPT-5.5的发布将推动AI技术的进步和应用创新。"
+    },
+    {
+      "id": "hn-47796469",
+      "source": "Hacker News",
+      "title": "Codex for almost everything",
+      "summary": "Codex for almost everything",
+      "url": "https://openai.com/index/codex-for-almost-everything/",
+      "published_at": "2026-04-16T17:12:19Z",
+      "score": 2112,
+      "title_cn": "几乎所有领域的Codex",
+      "summary_cn": "OpenAI推出了Codex，旨在支持几乎所有编程相关的任务。",
+      "highlights": [
+        "Codex发布",
+        "支持多领域",
+        "编程任务"
+      ],
+      "why_it_matters": "Codex的推出将极大地便利开发者，提高编程效率。"
+    },
+    {
+      "id": "hn-46108780",
+      "source": "Hacker News",
+      "title": "DeepSeek-v3.2: Pushing the frontier of open large language models [pdf]",
+      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2</a><p><a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#…",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf",
+      "published_at": "2025-12-01T15:48:03Z",
+      "score": 1912,
+      "title_cn": "DeepSeek-v3.2：开源大语言模型的前沿探索",
+      "summary_cn": "DeepSeek-v3.2发布，推动开源大语言模型的研究与应用。",
+      "highlights": [
+        "DeepSeek-v3.2发布",
+        "开源模型",
+        "研究应用"
+      ],
+      "why_it_matters": "该模型将促进开源AI技术的发展，推动更多创新。"
+    },
+    {
+      "id": "hn-47863217",
+      "source": "Hacker News",
+      "title": "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model",
+      "summary": "Qwen3.6-27B: Flagship-Level Coding in a 27B Dense Model",
+      "url": "https://qwen.ai/blog?id=qwen3.6-27b",
+      "published_at": "2026-04-22T13:19:58Z",
+      "score": 1809,
+      "title_cn": "Qwen3.6-27B：旗舰级编码模型",
+      "summary_cn": "Qwen3.6-27B发布，提供旗舰级的编码能力，适用于复杂任务。",
+      "highlights": [
+        "Qwen3.6-27B发布",
+        "旗舰级编码",
+        "复杂任务"
+      ],
+      "why_it_matters": "该模型的发布将提升编码效率，助力开发者。"
+    },
+    {
+      "id": "hn-47878905",
+      "source": "Hacker News",
+      "title": "An update on recent Claude Code quality reports",
+      "summary": "An update on recent Claude Code quality reports",
+      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+      "published_at": "2026-04-23T17:48:38Z",
+      "score": 1350,
+      "title_cn": "Claude代码质量报告更新",
+      "summary_cn": "对近期Claude代码质量报告进行了更新，提供了新的见解。",
+      "highlights": [
+        "Claude更新",
+        "代码质量",
+        "新见解"
+      ],
+      "why_it_matters": "更新将帮助开发者更好地理解和改进代码质量。"
+    },
+    {
+      "id": "hn-47844269",
+      "source": "Hacker News",
+      "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+      "summary": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+      "url": "https://docs.openclaw.ai/providers/anthropic",
+      "published_at": "2026-04-21T03:43:03Z",
+      "score": 1095,
+      "title_cn": "Anthropic允许再次使用OpenClaw风格的Claude CLI",
+      "summary_cn": "Anthropic宣布再次允许使用OpenClaw风格的Claude CLI，增强用户体验。",
+      "highlights": [
+        "OpenClaw风格",
+        "Claude CLI",
+        "用户体验"
+      ],
+      "why_it_matters": "这一决定将提升用户的操作灵活性和便利性。"
+    },
+    {
+      "id": "hn-47788385",
+      "source": "Hacker News",
+      "title": "The local LLM ecosystem doesn’t need Ollama",
+      "summary": "The local LLM ecosystem doesn’t need Ollama",
+      "url": "https://sleepingrobots.com/dreams/stop-using-ollama/",
+      "published_at": "2026-04-16T03:35:11Z",
+      "score": 1060,
+      "title_cn": "本地LLM生态系统不需要Ollama",
+      "summary_cn": "分析指出，本地LLM生态系统并不依赖于Ollama，提出了新的观点。",
+      "highlights": [
+        "本地LLM",
+        "不需要Ollama",
+        "新观点"
+      ],
+      "why_it_matters": "这一观点可能影响开发者对工具的选择和使用。"
+    },
+    {
+      "id": "hn-47791871",
+      "source": "Hacker News",
+      "title": "€54k spike in 13h from unrestricted Firebase browser key accessing Gemini APIs",
+      "summary": "€54k spike in 13h from unrestricted Firebase browser key accessing Gemini APIs",
+      "url": "https://discuss.ai.google.dev/t/unexpected-54k-billing-spike-in-13-hours-firebase-browser-key-without-api-restrictions-used-for-gemini-requests/140262",
+      "published_at": "2026-04-16T12:13:30Z",
+      "score": 985,
+      "title_cn": "Firebase浏览器密钥导致的54k欧元账单激增",
+      "summary_cn": "因未限制的Firebase浏览器密钥访问Gemini API，导致账单在13小时内激增54k欧元。",
+      "highlights": [
+        "账单激增",
+        "Firebase密钥",
+        "Gemini API"
+      ],
+      "why_it_matters": "此事件提醒开发者注意API使用的安全性和成本控制。"
+    }
+  ],
+  "repos": [
+    {
+      "name": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "language": "Python",
+      "stars": 49267,
+      "forks": 6458,
+      "updated_at": "2026-04-23T23:51:42Z",
+      "topics": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory",
+        "python"
+      ],
+      "score": 293.17,
+      "desc_cn": "高性能的AI记忆系统，经过严格基准测试",
+      "highlights": [
+        "The best-benchmarked open-source AI memory system. And it's free."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "nextlevelbuilder/goclaw",
+      "url": "https://github.com/nextlevelbuilder/goclaw",
+      "description": "GoClaw - GoClaw is OpenClaw rebuilt in Go — with multi-tenant isolation, 5-layer security, and native concurrency. Deploy AI agent teams at scale without compromising on safety.",
+      "language": "Go",
+      "stars": 2903,
+      "forks": 758,
+      "updated_at": "2026-04-24T00:35:04Z",
+      "topics": [
+        "agent-orchestration",
+        "ai-agent",
+        "ai-gateway",
+        "anthropic",
+        "chatbot",
+        "discord-bot",
+        "golang",
+        "harness",
+        "harness-engineering",
+        "llm",
+        "mcp",
+        "multi-agent",
+        "openai",
+        "postgresql",
+        "telegram-bot",
+        "websocket"
+      ],
+      "score": 242.14,
+      "desc_cn": "多租户隔离，确保安全性",
+      "highlights": [
+        "GoClaw - GoClaw is OpenClaw rebuilt in Go — with multi-tenant isolation, 5-layer security, and native concurrency. Deploy AI agent teams at scale without compromising on safety."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "affaan-m/everything-claude-code",
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 165304,
+      "forks": 25662,
+      "updated_at": "2026-04-23T06:14:29Z",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "score": 226.07,
+      "desc_cn": "集成多种AI代理技术，提升开发效率",
+      "highlights": [
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "rocketride-org/rocketride-server",
+      "url": "https://github.com/rocketride-org/rocketride-server",
+      "description": "High-performance AI pipeline engine with a C++ core and 50+ Python-extensible nodes. Build, debug, and scale LLM workflows with 13+ model providers, 8+ vector databases, and agent orchestration, all from your IDE. Inclu…",
+      "language": "C++",
+      "stars": 1871,
+      "forks": 47,
+      "updated_at": "2026-04-24T00:08:35Z",
+      "topics": [
+        "ai",
+        "cpp",
+        "data-pipeline",
+        "data-processing",
+        "machine-learning",
+        "mcp",
+        "python",
+        "sdk",
+        "typescript",
+        "vscode-extension"
+      ],
+      "score": 224.51,
+      "desc_cn": "高性能的AI管道引擎，核心使用C++",
+      "highlights": [
+        "High-performance AI pipeline engine with a C++ core and 50+ Python-extensible nodes. Build, debug, and scale LLM workflows with 13+ model providers, 8+ vector databases, and agent orchestration, all from your IDE. Inclu…"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "can1357/oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "description": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
+      "language": "TypeScript",
+      "stars": 3370,
+      "forks": 313,
+      "updated_at": "2026-04-23T23:20:35Z",
+      "topics": [
+        "ai-agent",
+        "ai-coding-agent",
+        "anthropic",
+        "bun",
+        "claude",
+        "cli",
+        "coding-assistant",
+        "llm",
+        "mcp",
+        "multi-provider",
+        "openai",
+        "rust",
+        "terminal",
+        "tui",
+        "typescript"
+      ],
+      "score": 221.42,
+      "desc_cn": "集成多种AI工具，提升编码效率",
+      "highlights": [
+        "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more"
+      ],
+      "why_watch": "适合继续跟踪。"
+    }
+  ],
+  "takeaway": "今天的开源趋势显示，AI记忆系统和多种AI代理技术的集成受到关注，开发者们正寻求提升编码和开发效率。"
+}
