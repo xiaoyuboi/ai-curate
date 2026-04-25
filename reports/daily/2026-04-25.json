@@ -1,0 +1,300 @@
+{
+  "generated_at": "2026-04-25T08:31:56.545355+08:00",
+  "repository": "xiaoyuboi/ai-curate",
+  "news": [
+    {
+      "id": "hn-47884971",
+      "source": "Hacker News",
+      "title": "DeepSeek v4",
+      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V4-Pro&#x2F;blob&#x2F;main&#x2F;DeepSeek_V4.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V4-Pro&#x2F;blob&#…",
+      "url": "https://api-docs.deepseek.com/",
+      "published_at": "2026-04-24T03:01:21Z",
+      "score": 4569,
+      "title_cn": "DeepSeek v4",
+      "summary_cn": "DeepSeek v4发布，提供了最新的功能和改进，详细信息可查阅官方文档。",
+      "highlights": [
+        "DeepSeek v4发布",
+        "新功能和改进",
+        "官方文档链接"
+      ],
+      "why_it_matters": "新版本可能推动大型语言模型的发展。"
+    },
+    {
+      "id": "hn-47879092",
+      "source": "Hacker News",
+      "title": "GPT-5.5",
+      "summary": "GPT-5.5",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "published_at": "2026-04-23T18:01:39Z",
+      "score": 3562,
+      "title_cn": "GPT-5.5",
+      "summary_cn": "OpenAI推出GPT-5.5，带来了一系列新特性和改进。",
+      "highlights": [
+        "GPT-5.5发布",
+        "新特性",
+        "OpenAI官方链接"
+      ],
+      "why_it_matters": "新版本可能提升AI应用的能力。"
+    },
+    {
+      "id": "hn-47878905",
+      "source": "Hacker News",
+      "title": "An update on recent Claude Code quality reports",
+      "summary": "An update on recent Claude Code quality reports",
+      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+      "published_at": "2026-04-23T17:48:38Z",
+      "score": 2298,
+      "title_cn": "Claude代码质量报告更新",
+      "summary_cn": "关于Claude代码质量的最新报告更新，提供了重要的反馈和改进建议。",
+      "highlights": [
+        "Claude代码质量报告",
+        "最新更新",
+        "改进建议"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47796469",
+      "source": "Hacker News",
+      "title": "Codex for almost everything",
+      "summary": "Codex for almost everything",
+      "url": "https://openai.com/index/codex-for-almost-everything/",
+      "published_at": "2026-04-16T17:12:19Z",
+      "score": 2116,
+      "title_cn": "几乎所有领域的Codex",
+      "summary_cn": "OpenAI发布Codex，旨在支持几乎所有领域的应用开发。",
+      "highlights": [
+        "Codex发布",
+        "支持多领域",
+        "OpenAI官方链接"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-46108780",
+      "source": "Hacker News",
+      "title": "DeepSeek-v3.2: Pushing the frontier of open large language models [pdf]",
+      "summary": "<a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2\" rel=\"nofollow\">https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V3.2</a><p><a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#…",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V3.2/resolve/main/assets/paper.pdf",
+      "published_at": "2025-12-01T15:48:03Z",
+      "score": 1912,
+      "title_cn": "DeepSeek-v3.2：推动开放大型语言模型的前沿",
+      "summary_cn": "DeepSeek-v3.2发布，推动开放大型语言模型的研究和应用。",
+      "highlights": [
+        "DeepSeek-v3.2发布",
+        "推动研究",
+        "PDF链接"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47892019",
+      "source": "Hacker News",
+      "title": "I cancelled Claude: Token issues, declining quality, and poor support",
+      "summary": "I cancelled Claude: Token issues, declining quality, and poor support",
+      "url": "https://nickyreinert.de/en/2026/2026-04-24-claude-critics/",
+      "published_at": "2026-04-24T15:59:19Z",
+      "score": 1642,
+      "title_cn": "我取消了Claude：代币问题、质量下降和支持不足",
+      "summary_cn": "用户因代币问题和质量下降取消了Claude的使用，反映出用户的不满。",
+      "highlights": [
+        "取消Claude",
+        "代币问题",
+        "用户反馈"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47844269",
+      "source": "Hacker News",
+      "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+      "summary": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+      "url": "https://docs.openclaw.ai/providers/anthropic",
+      "published_at": "2026-04-21T03:43:03Z",
+      "score": 1094,
+      "title_cn": "Anthropic表示再次允许OpenClaw风格的Claude CLI使用",
+      "summary_cn": "Anthropic宣布重新允许OpenClaw风格的Claude CLI使用，带来新的使用灵活性。",
+      "highlights": [
+        "重新允许使用",
+        "OpenClaw风格",
+        "Anthropic声明"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47843434",
+      "source": "Hacker News",
+      "title": "The Onion to Take over InfoWars",
+      "summary": "The Onion to Take over InfoWars",
+      "url": "https://www.nytimes.com/2026/04/20/business/infowars-alex-jones-the-onion.html",
+      "published_at": "2026-04-21T01:23:23Z",
+      "score": 1012,
+      "title_cn": "洋葱报将接管InfoWars",
+      "summary_cn": "洋葱报宣布将接管InfoWars，可能改变媒体格局。",
+      "highlights": [
+        "洋葱报接管",
+        "InfoWars",
+        "媒体变革"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    }
+  ],
+  "repos": [
+    {
+      "name": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "language": "Python",
+      "stars": 49473,
+      "forks": 6487,
+      "updated_at": "2026-04-24T23:34:28Z",
+      "topics": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory",
+        "python"
+      ],
+      "score": 293.25,
+      "desc_cn": "高性能的AI记忆系统，经过严格基准测试",
+      "highlights": [
+        "The best-benchmarked open-source AI memory system. And it's free."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "rohitg00/ai-engineering-from-scratch",
+      "url": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "description": "Learn it. Build it. Ship it for others.",
+      "language": "Python",
+      "stars": 4947,
+      "forks": 1045,
+      "updated_at": "2026-04-25T00:16:50Z",
+      "topics": [
+        "agents",
+        "ai",
+        "ai-agents",
+        "ai-engineering",
+        "computer-vision",
+        "course",
+        "deep-learning",
+        "from-scratch",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mcp",
+        "nlp",
+        "python",
+        "reinforcement-learning",
+        "rust",
+        "swarm-intelligence",
+        "transformers",
+        "tutorial",
+        "typescript"
+      ],
+      "score": 251.41,
+      "desc_cn": "涵盖从基础到高级的人工智能工程知识",
+      "highlights": [
+        "Learn it. Build it. Ship it for others."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "Arthur-Ficial/apfel",
+      "url": "https://github.com/Arthur-Ficial/apfel",
+      "description": "The free AI already on your Mac. CLI tool, OpenAI-compatible server, and interactive chat — all on-device via Apple Intelligence. No API keys, no cloud, no downloads.",
+      "language": "Swift",
+      "stars": 4950,
+      "forks": 192,
+      "updated_at": "2026-04-25T00:07:32Z",
+      "topics": [
+        "apple-intelligence",
+        "apple-silicon",
+        "cli",
+        "foundationmodels",
+        "homebrew",
+        "llm",
+        "macos",
+        "macos-26",
+        "on-device",
+        "openai-compatible",
+        "swift",
+        "tool-calling",
+        "unix"
+      ],
+      "score": 244.66,
+      "desc_cn": "完全在设备上运行，无需依赖云服务",
+      "highlights": [
+        "The free AI already on your Mac. CLI tool, OpenAI-compatible server, and interactive chat — all on-device via Apple Intelligence. No API keys, no cloud, no downloads."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "1186258278/OpenClawChineseTranslation",
+      "url": "https://github.com/1186258278/OpenClawChineseTranslation",
+      "description": "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！",
+      "language": "JavaScript",
+      "stars": 3732,
+      "forks": 465,
+      "updated_at": "2026-04-24T23:30:52Z",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "chatbot",
+        "chinese",
+        "claude-ai",
+        "clawd",
+        "clawdbot",
+        "discord",
+        "llm",
+        "lobster",
+        "localization",
+        "moltbot",
+        "nodejs",
+        "open-source",
+        "openclaw",
+        "telegram",
+        "tool-calling",
+        "whatsapp",
+        "zh-cn"
+      ],
+      "score": 241.75,
+      "desc_cn": "支持多平台接入，包括WhatsApp、Telegram和Discord",
+      "highlights": [
+        "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "alvinreal/awesome-opensource-ai",
+      "url": "https://github.com/alvinreal/awesome-opensource-ai",
+      "description": "Curated list of the best truly open-source AI projects, models, tools, and infrastructure.",
+      "language": "Python",
+      "stars": 2956,
+      "forks": 283,
+      "updated_at": "2026-04-25T00:18:34Z",
+      "topics": [
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "awesome",
+        "awesome-list",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mlops",
+        "open-source",
+        "open-source-ai",
+        "rag"
+      ],
+      "score": 238.47,
+      "desc_cn": "汇集了众多优秀的开源AI项目",
+      "highlights": [
+        "Curated list of the best truly open-source AI projects, models, tools, and infrastructure."
+      ],
+      "why_watch": "适合继续跟踪。"
+    }
+  ],
+  "takeaway": "今天的开源趋势显示，AI记忆系统和本地运行的AI工具受到关注，同时，全面的AI工程知识和多平台接入的翻译工具也在增长。"
+}
