@@ -1,0 +1,297 @@
+{
+  "generated_at": "2026-04-27T08:35:31.046956+08:00",
+  "repository": "xiaoyuboi/ai-curate",
+  "news": [
+    {
+      "id": "hn-47884971",
+      "source": "Hacker News",
+      "title": "DeepSeek v4",
+      "summary": "<a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V4-Pro&#x2F;blob&#x2F;m…",
+      "url": "https://api-docs.deepseek.com/news/news260424",
+      "published_at": "2026-04-24T03:01:21Z",
+      "score": 5229,
+      "title_cn": "DeepSeek v4",
+      "summary_cn": "DeepSeek v4发布，提供了新的API文档和功能，旨在提升用户体验。",
+      "highlights": [
+        "DeepSeek v4发布",
+        "新API文档",
+        "提升用户体验"
+      ],
+      "why_it_matters": "新版本可能改善开发者的使用体验，推动AI应用的发展。"
+    },
+    {
+      "id": "hn-47879092",
+      "source": "Hacker News",
+      "title": "GPT-5.5",
+      "summary": "GPT-5.5",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "published_at": "2026-04-23T18:01:39Z",
+      "score": 3662,
+      "title_cn": "GPT-5.5",
+      "summary_cn": "OpenAI推出了GPT-5.5，进一步提升了模型的能力和应用范围。",
+      "highlights": [
+        "GPT-5.5发布",
+        "能力提升",
+        "应用范围扩大"
+      ],
+      "why_it_matters": "新模型将推动AI技术的进步，影响多个行业。"
+    },
+    {
+      "id": "hn-47878905",
+      "source": "Hacker News",
+      "title": "An update on recent Claude Code quality reports",
+      "summary": "An update on recent Claude Code quality reports",
+      "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+      "published_at": "2026-04-23T17:48:38Z",
+      "score": 2396,
+      "title_cn": "Claude代码质量报告更新",
+      "summary_cn": "关于Claude代码质量的最新报告更新，提供了重要的改进信息。",
+      "highlights": [
+        "Claude代码质量更新",
+        "重要改进",
+        "用户反馈"
+      ],
+      "why_it_matters": "提高代码质量对用户体验和产品稳定性至关重要。"
+    },
+    {
+      "id": "hn-47892019",
+      "source": "Hacker News",
+      "title": "I cancelled Claude: Token issues, declining quality, and poor support",
+      "summary": "I cancelled Claude: Token issues, declining quality, and poor support",
+      "url": "https://nickyreinert.de/en/2026/2026-04-24-claude-critics/",
+      "published_at": "2026-04-24T15:59:19Z",
+      "score": 2109,
+      "title_cn": "我取消了Claude：代币问题、质量下降和支持不足",
+      "summary_cn": "用户因代币问题、质量下降和支持不足取消了Claude的使用。",
+      "highlights": [
+        "取消Claude",
+        "代币问题",
+        "支持不足"
+      ],
+      "why_it_matters": "用户反馈反映了AI产品在支持和质量上的挑战。"
+    },
+    {
+      "id": "hn-47911524",
+      "source": "Hacker News",
+      "title": "An AI agent deleted our production database. The agent's confession is below",
+      "summary": "An AI agent deleted our production database. The agent's confession is below",
+      "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
+      "published_at": "2026-04-26T16:27:29Z",
+      "score": 1545,
+      "title_cn": "AI代理删除了我们的生产数据库",
+      "summary_cn": "一名AI代理删除了生产数据库，代理的忏悔在下方。",
+      "highlights": [
+        "AI代理错误",
+        "数据库删除",
+        "代理忏悔"
+      ],
+      "why_it_matters": "此事件突显了AI系统在实际应用中的潜在风险。"
+    },
+    {
+      "id": "hn-47844269",
+      "source": "Hacker News",
+      "title": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+      "summary": "Anthropic says OpenClaw-style Claude CLI usage is allowed again",
+      "url": "https://docs.openclaw.ai/providers/anthropic",
+      "published_at": "2026-04-21T03:43:03Z",
+      "score": 1095,
+      "title_cn": "Anthropic宣布再次允许OpenClaw风格的Claude CLI使用",
+      "summary_cn": "Anthropic宣布，OpenClaw风格的Claude CLI使用再次被允许。",
+      "highlights": [
+        "允许CLI使用",
+        "OpenClaw风格",
+        "Anthropic公告"
+      ],
+      "why_it_matters": "此决定可能影响开发者的工具选择和使用方式。"
+    },
+    {
+      "id": "hn-47843434",
+      "source": "Hacker News",
+      "title": "The Onion to Take over InfoWars",
+      "summary": "The Onion to Take over InfoWars",
+      "url": "https://www.nytimes.com/2026/04/20/business/infowars-alex-jones-the-onion.html",
+      "published_at": "2026-04-21T01:23:23Z",
+      "score": 1022,
+      "title_cn": "洋葱报将接管InfoWars",
+      "summary_cn": "洋葱报宣布将接管InfoWars，带来新的内容方向。",
+      "highlights": [
+        "洋葱报接管",
+        "InfoWars",
+        "内容方向变化"
+      ],
+      "why_it_matters": "这一变化可能影响信息传播和公众舆论。"
+    },
+    {
+      "id": "hn-47904568",
+      "source": "Hacker News",
+      "title": "The AI industry is discovering that the public hates it",
+      "summary": "The AI industry is discovering that the public hates it",
+      "url": "https://newrepublic.com/article/209163/ai-industry-discovering-public-backlash",
+      "published_at": "2026-04-25T21:11:11Z",
+      "score": 986,
+      "title_cn": "AI行业发现公众对其的厌恶",
+      "summary_cn": "AI行业正在意识到公众对其的反感情绪，面临信任危机。",
+      "highlights": [
+        "公众反感",
+        "信任危机",
+        "AI行业挑战"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    }
+  ],
+  "repos": [
+    {
+      "name": "MemPalace/mempalace",
+      "url": "https://github.com/MemPalace/mempalace",
+      "description": "The best-benchmarked open-source AI memory system. And it's free.",
+      "language": "Python",
+      "stars": 49819,
+      "forks": 6528,
+      "updated_at": "2026-04-26T22:54:05Z",
+      "topics": [
+        "ai",
+        "chromadb",
+        "llm",
+        "mcp",
+        "memory",
+        "python"
+      ],
+      "score": 254.01,
+      "desc_cn": "高性能的AI记忆系统，适用于多种应用场景。",
+      "highlights": [
+        "The best-benchmarked open-source AI memory system. And it's free."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "can1357/oh-my-pi",
+      "url": "https://github.com/can1357/oh-my-pi",
+      "description": "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more",
+      "language": "TypeScript",
+      "stars": 3487,
+      "forks": 323,
+      "updated_at": "2026-04-26T23:55:00Z",
+      "topics": [
+        "ai-agent",
+        "ai-coding-agent",
+        "anthropic",
+        "bun",
+        "claude",
+        "cli",
+        "coding-assistant",
+        "llm",
+        "mcp",
+        "multi-provider",
+        "openai",
+        "rust",
+        "terminal",
+        "tui",
+        "typescript"
+      ],
+      "score": 241.48,
+      "desc_cn": "提供强大的终端AI编码助手功能",
+      "highlights": [
+        "⌥ AI Coding agent for the terminal — hash-anchored edits, optimized tool harness, LSP, Python, browser, subagents, and more"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "jo-inc/camofox-browser",
+      "url": "https://github.com/jo-inc/camofox-browser",
+      "description": "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement.",
+      "language": "JavaScript",
+      "stars": 3248,
+      "forks": 328,
+      "updated_at": "2026-04-26T23:55:47Z",
+      "topics": [
+        "ai-agent",
+        "anti-bot",
+        "antidetect-browser",
+        "automation",
+        "bot-detection",
+        "browser-automation",
+        "cloudflare-bypass",
+        "headless-browser",
+        "javascript",
+        "nodejs",
+        "playwright",
+        "puppeteer",
+        "scraping",
+        "stealth-browser",
+        "web-scraping"
+      ],
+      "score": 240.48,
+      "desc_cn": "隐形无头浏览器，专为AI代理设计",
+      "highlights": [
+        "Stealth headless browser for AI agents — bypass Cloudflare, bot detection, and anti-scraping. Drop-in Puppeteer/Playwright replacement."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "alvinreal/awesome-opensource-ai",
+      "url": "https://github.com/alvinreal/awesome-opensource-ai",
+      "description": "Curated list of the best truly open-source AI projects, models, tools, and infrastructure.",
+      "language": "Python",
+      "stars": 2998,
+      "forks": 289,
+      "updated_at": "2026-04-27T00:03:58Z",
+      "topics": [
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "awesome",
+        "awesome-list",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mlops",
+        "open-source",
+        "open-source-ai",
+        "rag"
+      ],
+      "score": 238.77,
+      "desc_cn": "汇集了众多优秀的开源AI项目",
+      "highlights": [
+        "Curated list of the best truly open-source AI projects, models, tools, and infrastructure."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "1186258278/OpenClawChineseTranslation",
+      "url": "https://github.com/1186258278/OpenClawChineseTranslation",
+      "description": "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！",
+      "language": "JavaScript",
+      "stars": 3735,
+      "forks": 466,
+      "updated_at": "2026-04-26T23:30:13Z",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "chatbot",
+        "chinese",
+        "claude-ai",
+        "clawd",
+        "clawdbot",
+        "discord",
+        "llm",
+        "lobster",
+        "localization",
+        "moltbot",
+        "nodejs",
+        "open-source",
+        "openclaw",
+        "telegram",
+        "tool-calling",
+        "whatsapp",
+        "zh-cn"
+      ],
+      "score": 235.81,
+      "desc_cn": "支持多平台接入，包括WhatsApp、Telegram和Discord",
+      "highlights": [
+        "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！"
+      ],
+      "why_watch": "适合继续跟踪。"
+    }
+  ],
+  "takeaway": "今天的开源趋势集中在高性能AI记忆系统和多平台AI助手，显示出对智能化工具的强烈需求。"
+}
