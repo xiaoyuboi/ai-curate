@@ -1,0 +1,295 @@
+{
+  "generated_at": "2026-04-30T08:38:46.211779+08:00",
+  "repository": "xiaoyuboi/ai-curate",
+  "news": [
+    {
+      "id": "hn-47884971",
+      "source": "Hacker News",
+      "title": "DeepSeek v4",
+      "summary": "<a href=\"https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;\" rel=\"nofollow\">https:&#x2F;&#x2F;api-docs.deepseek.com&#x2F;</a><p><a href=\"https:&#x2F;&#x2F;huggingface.co&#x2F;deepseek-ai&#x2F;DeepSeek-V4-Pro&#x2F;blob&#x2F;m…",
+      "url": "https://api-docs.deepseek.com/news/news260424",
+      "published_at": "2026-04-24T03:01:21Z",
+      "score": 5294,
+      "title_cn": "DeepSeek v4",
+      "summary_cn": "DeepSeek v4发布，提供新的API文档和功能，详细信息请查看官方链接。",
+      "highlights": [
+        "DeepSeek v4发布",
+        "新API文档",
+        "功能更新"
+      ],
+      "why_it_matters": "新版本可能提升开发者的使用体验和功能扩展能力。"
+    },
+    {
+      "id": "hn-47879092",
+      "source": "Hacker News",
+      "title": "GPT-5.5",
+      "summary": "GPT-5.5",
+      "url": "https://openai.com/index/introducing-gpt-5-5/",
+      "published_at": "2026-04-23T18:01:39Z",
+      "score": 3688,
+      "title_cn": "GPT-5.5",
+      "summary_cn": "OpenAI推出GPT-5.5，进一步提升AI模型的能力和应用。",
+      "highlights": [
+        "GPT-5.5发布",
+        "能力提升",
+        "应用扩展"
+      ],
+      "why_it_matters": "新版本将推动AI技术的进步和应用场景的拓展。"
+    },
+    {
+      "id": "hn-47911524",
+      "source": "Hacker News",
+      "title": "An AI agent deleted our production database. The agent's confession is below",
+      "summary": "An AI agent deleted our production database. The agent's confession is below",
+      "url": "https://twitter.com/lifeof_jer/status/2048103471019434248",
+      "published_at": "2026-04-26T16:27:29Z",
+      "score": 2884,
+      "title_cn": "AI代理删除生产数据库",
+      "summary_cn": "一名AI代理删除了我们的生产数据库，代理的忏悔在下方。",
+      "highlights": [
+        "AI代理失误",
+        "生产数据库丢失",
+        "代理忏悔"
+      ],
+      "why_it_matters": "反映出AI系统在关键任务中的潜在风险和管理挑战。"
+    },
+    {
+      "id": "hn-47921248",
+      "source": "Hacker News",
+      "title": "Microsoft and OpenAI end their exclusive and revenue-sharing deal",
+      "summary": "Gift Article: <a href=\"https:&#x2F;&#x2F;www.bloomberg.com&#x2F;news&#x2F;articles&#x2F;2026-04-27&#x2F;microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai?accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJz…",
+      "url": "https://www.bloomberg.com/news/articles/2026-04-27/microsoft-to-stop-sharing-revenue-with-main-ai-partner-openai",
+      "published_at": "2026-04-27T13:22:42Z",
+      "score": 2657,
+      "title_cn": "微软与OpenAI结束独占合作",
+      "summary_cn": "微软与OpenAI结束独占和收益分享协议，未来合作模式将发生变化。",
+      "highlights": [
+        "合作结束",
+        "收益分享中止",
+        "未来不确定性"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47952722",
+      "source": "Hacker News",
+      "title": "HERMES.md in commit messages causes requests to route to extra usage billing",
+      "summary": "HERMES.md in commit messages causes requests to route to extra usage billing",
+      "url": "https://github.com/anthropics/claude-code/issues/53262",
+      "published_at": "2026-04-29T18:54:31Z",
+      "score": 1742,
+      "title_cn": "HERMES.md导致额外费用",
+      "summary_cn": "HERMES.md在提交信息中导致请求被路由到额外的使用计费。",
+      "highlights": [
+        "HERMES.md问题",
+        "额外费用",
+        "提交信息影响"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47932937",
+      "source": "Hacker News",
+      "title": "Who owns the code Claude Code wrote?",
+      "summary": "Who owns the code Claude Code wrote?",
+      "url": "https://legallayer.substack.com/p/who-owns-the-claude-code-wrote",
+      "published_at": "2026-04-28T11:24:52Z",
+      "score": 1520,
+      "title_cn": "Claude Code的代码归属问题",
+      "summary_cn": "讨论Claude Code所写代码的所有权归属问题，引发法律关注。",
+      "highlights": [
+        "代码归属",
+        "法律问题",
+        "Claude Code"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47927903",
+      "source": "Hacker News",
+      "title": "Talkie: a 13B vintage language model from 1930",
+      "summary": "Talkie: a 13B vintage language model from 1930",
+      "url": "https://talkie-lm.com/introducing-talkie",
+      "published_at": "2026-04-27T21:55:48Z",
+      "score": 1375,
+      "title_cn": "Talkie：1930年的语言模型",
+      "summary_cn": "Talkie发布，介绍一款来自1930年的13B复古语言模型。",
+      "highlights": [
+        "Talkie发布",
+        "复古语言模型",
+        "历史回顾"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    },
+    {
+      "id": "hn-47942437",
+      "source": "Hacker News",
+      "title": "How ChatGPT serves ads",
+      "summary": "How ChatGPT serves ads",
+      "url": "https://www.buchodi.com/how-chatgpt-serves-ads-heres-the-full-attribution-loop/",
+      "published_at": "2026-04-28T23:54:14Z",
+      "score": 1171,
+      "title_cn": "ChatGPT如何投放广告",
+      "summary_cn": "探讨ChatGPT的广告投放机制及其完整归属循环。",
+      "highlights": [
+        "广告投放机制",
+        "ChatGPT分析",
+        "归属循环"
+      ],
+      "why_it_matters": "值得继续跟踪。"
+    }
+  ],
+  "repos": [
+    {
+      "name": "affaan-m/everything-claude-code",
+      "url": "https://github.com/affaan-m/everything-claude-code",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "stars": 170197,
+      "forks": 26365,
+      "updated_at": "2026-04-30T00:34:03Z",
+      "topics": [
+        "ai-agents",
+        "anthropic",
+        "claude",
+        "claude-code",
+        "developer-tools",
+        "llm",
+        "mcp",
+        "productivity"
+      ],
+      "score": 317.39,
+      "desc_cn": "集成多种AI代理技术，提升开发效率。",
+      "highlights": [
+        "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "jundot/omlx",
+      "url": "https://github.com/jundot/omlx",
+      "description": "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar",
+      "language": "Python",
+      "stars": 11866,
+      "forks": 1032,
+      "updated_at": "2026-04-30T00:00:41Z",
+      "topics": [
+        "apple-silicon",
+        "inference-server",
+        "llm",
+        "macos",
+        "mlx",
+        "openai-api"
+      ],
+      "score": 264.48,
+      "desc_cn": "支持Apple Silicon，优化性能",
+      "highlights": [
+        "LLM inference server with continuous batching & SSD caching for Apple Silicon — managed from the macOS menu bar"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "1186258278/OpenClawChineseTranslation",
+      "url": "https://github.com/1186258278/OpenClawChineseTranslation",
+      "description": "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！",
+      "language": "JavaScript",
+      "stars": 3750,
+      "forks": 466,
+      "updated_at": "2026-04-29T23:42:49Z",
+      "topics": [
+        "ai-agent",
+        "ai-assistant",
+        "chatbot",
+        "chinese",
+        "claude-ai",
+        "clawd",
+        "clawdbot",
+        "discord",
+        "llm",
+        "lobster",
+        "localization",
+        "moltbot",
+        "nodejs",
+        "open-source",
+        "openclaw",
+        "telegram",
+        "tool-calling",
+        "whatsapp",
+        "zh-cn"
+      ],
+      "score": 244.03,
+      "desc_cn": "支持多平台接入，包括WhatsApp、Telegram和Discord",
+      "highlights": [
+        "🦞 OpenClaw (Clawdbot/Moltbot) 汉化版 - 开源个人 AI 助手中文版 | Claude/ChatGPT LLM 接入 | WhatsApp/Telegram/Discord 多平台 | 每小时自动同步 | CLI + Dashboard 全中文 | 全流程搭建教程，以及排错指南！"
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "alvinreal/awesome-opensource-ai",
+      "url": "https://github.com/alvinreal/awesome-opensource-ai",
+      "description": "Curated list of the best truly open-source AI projects, models, tools, and infrastructure.",
+      "language": "Python",
+      "stars": 3318,
+      "forks": 352,
+      "updated_at": "2026-04-30T00:05:55Z",
+      "topics": [
+        "agents",
+        "ai",
+        "artificial-intelligence",
+        "awesome",
+        "awesome-list",
+        "generative-ai",
+        "llm",
+        "machine-learning",
+        "mlops",
+        "open-source",
+        "open-source-ai",
+        "rag"
+      ],
+      "score": 241.08,
+      "desc_cn": "涵盖广泛的开源AI项目和工具",
+      "highlights": [
+        "Curated list of the best truly open-source AI projects, models, tools, and infrastructure."
+      ],
+      "why_watch": "适合继续跟踪。"
+    },
+    {
+      "name": "EKKOLearnAI/hermes-web-ui",
+      "url": "https://github.com/EKKOLearnAI/hermes-web-ui",
+      "description": "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)",
+      "language": "TypeScript",
+      "stars": 2931,
+      "forks": 367,
+      "updated_at": "2026-04-30T00:17:25Z",
+      "topics": [
+        "agent",
+        "ai-agent",
+        "chat-ui",
+        "chatbot",
+        "claude",
+        "dashboard",
+        "discord-bot",
+        "hermes",
+        "hermes-agent",
+        "hermes-webui",
+        "llm",
+        "multi-model",
+        "multi-platform",
+        "self-hosted",
+        "slack-bot",
+        "telegram-bot",
+        "typescript",
+        "vue3",
+        "web-ui",
+        "whatsapp"
+      ],
+      "score": 239.38,
+      "desc_cn": "支持多平台的AI聊天功能",
+      "highlights": [
+        "Web dashboard for Hermes Agent — multi-platform AI chat, session management, scheduled jobs, usage analytics & channel configuration (Telegram, Discord, Slack, WhatsApp)"
+      ],
+      "why_watch": "适合继续跟踪。"
+    }
+  ],
+  "takeaway": "今天的开源趋势显示，AI代理技术和多平台支持的工具受到关注，开发者重视性能优化与集成能力。"
+}
